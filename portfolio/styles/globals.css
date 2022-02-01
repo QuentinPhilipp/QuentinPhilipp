@@ -1,0 +1,7 @@
+.main-container {
+  padding-top: 70px;
+}
+.entries .main-image img {
+  width: 100%;
+  display: block;
+}
