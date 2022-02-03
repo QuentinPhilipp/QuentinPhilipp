@@ -1,0 +1,4 @@
+.worksContainer {
+    display: flex;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "works",
+  "info": {
+    "singularName": "work",
+    "pluralName": "works",
+    "displayName": "Work",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "startdate": {
+      "type": "date"
+    },
+    "enddate": {
+      "type": "date"
+    },
+    "stack": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "contexts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::work-context.work-context"
+    },
+    "place": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::work-place.work-place"
+    }
+  }
+}

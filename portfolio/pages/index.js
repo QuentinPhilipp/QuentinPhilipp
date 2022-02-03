@@ -1,42 +1,26 @@
 import Layout from '../components/Layout';
-import fetchFromCMS from '../lib/service';
-import Image from 'next/image';
-import Link from 'next/link';
-import processMarkdown from '../lib/processMarkdown';
+import Works from '../components/Works';
+import Projects from '../components/Projects';
+import fetchStrapi from '../lib/api';
 
-export default function Home({ portfolioItems }) {
+export default function Home({ projects, works }) {
   return (
     <Layout>
-      <div className="entries">
-        <div className="row justify-content-start ">
-          {portfolioItems.map((portfolio) => (
-            <div className="col-md-6">
-              <div className="entry mb-3">
-                <Link as={`/portfolio/${portfolio.attributes.slug}`} href="/portfolio/[id]">
-                  <div className="main-image">
-                    <Image
-                      src={portfolio.attributes.image.data.attributes.name}
-                      width={600}
-                      height={400}
-                      alt={portfolio.attributes.Headline}
-                    />
-                    <h1>{portfolio.attributes.Headline}</h1>
-                    <p>{portfolio.attributes.content}</p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Projects projects={projects}/>
+      {/* <Works works={works} /> */}
     </Layout>
+
   );
 }
 
 export async function getStaticProps() {
-  const portfolioItems = await fetchFromCMS('portfolios?');
+  const [projects, works] = await Promise.all([
+    fetchStrapi('projects?'),
+    fetchStrapi('works?'),
+  ]);
   return {
-    props: { portfolioItems },
+    props: { projects, works },
     revalidate: 30,
   };
 }
+

@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "work_contexts",
+  "info": {
+    "singularName": "work-context",
+    "pluralName": "work-contexts",
+    "displayName": "Work Context"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "context": {
+      "type": "string"
+    }
+  }
+}

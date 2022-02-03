@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "project_dev_technos",
+  "info": {
+    "singularName": "project-dev-techno",
+    "pluralName": "project-dev-technos",
+    "displayName": "Project Dev Techno"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "techno": {
+      "type": "string"
+    }
+  }
+}

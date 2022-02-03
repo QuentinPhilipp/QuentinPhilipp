@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "project_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-category.project-category"
+    },
+    "project_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-type.project-type"
+    },
+    "project_frontend": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "project_backend": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "project_framework": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "project_db": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    }
+  }
+}
