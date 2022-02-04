@@ -1,4 +1,11 @@
-.projectContainer {
-    display: flex;
-    flex-wrap: wrap;
+.projectsLayout {
+    padding: 8rem 4rem 10rem 4rem;
 }
+
+
+.projectsContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 28rem;
+}
+

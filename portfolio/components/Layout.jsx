@@ -3,9 +3,7 @@ import Navbar from './shared/Navbar';
 const Layout = ({ children }) => (
     <div>
         <Navbar />
-        <div className="main-container container-fluid">
-            {children}
-        </div>
+        {children}
     </div>
   )
   export default Layout; 
