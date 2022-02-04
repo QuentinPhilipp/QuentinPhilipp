@@ -3,7 +3,7 @@ import ProjectItem from "./ProjectItem";
 
 const Projects = ({ projects }) => (
     <div className={styles.projectsLayout}>
-        <h1>Projects</h1>
+        <h1 className={styles.projectsHeader}>Projects</h1>
         <div className={styles.projectsContainer}>
             {projects.map((project) => (
                 <ProjectItem project={project} key={project.id}/>

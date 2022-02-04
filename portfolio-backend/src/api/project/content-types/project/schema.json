@@ -62,6 +62,15 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "project_highlight_techno": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-dev-techno.project-dev-techno"
+    },
+    "short_desc": {
+      "type": "string",
+      "maxLength": 120
     }
   }
 }

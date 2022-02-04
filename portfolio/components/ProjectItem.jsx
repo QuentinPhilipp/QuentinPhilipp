@@ -6,26 +6,25 @@ import styles from "../styles/ProjectItem.module.css";
 
 
 const ProjectItem = ({ project }) => (
-    <div className={styles.projectWrapper}>
+    <article className={styles.projectWrapper}>
         <div className={styles.card}>
             <div className={styles.imageContainer}>
                 <Image
                     src={getStrapiMedia(project.attributes.image.data[0].attributes)}
                     width={600}
-                    height={400}
-                    alt={project.attributes.Headline}
+                    height={300}
+                    alt={project.attributes.title}
+                    objectFit="cover"
                 />
-                <h1>{project.attributes.Headline}</h1>
-                <p>{project.attributes.content}</p>
             </div>
             <div className={styles.infoContainer}>
                 <div className={styles.textContainer}>
                     <h3>{project.attributes.title}</h3>
-                    <p>{project.attributes.description.slice(0,50) + "..."}</p>
+                    <p className={styles.projectShortDesc}>{project.attributes.short_desc}</p>
                     <div className={styles.techContainer}>
-                        <TechNameItem name="Javascript"/>
-                        <TechNameItem name="NextJS"/>
-                        <TechNameItem name="HTML"/>
+                        {project.attributes.project_highlight_techno.data.map((techno) => (
+                            <TechNameItem techno={techno} key={techno.id}/>
+                        ))}
                     </div>
                 </div>
                 <div className={styles.buttonContainer}>
@@ -48,7 +47,7 @@ const ProjectItem = ({ project }) => (
                 </div>
             </div>
         </div>
-    </div>
+    </article>
 
 )
 

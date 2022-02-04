@@ -1,6 +1,14 @@
+.projectsHeader {
+    text-align: center;
+    color: rgb(237, 253, 238);
+}
+
 .projectsLayout {
     padding: 8rem 4rem 10rem 4rem;
+    background-color: grey;
+    background: #171820
 }
+
 
 
 .projectsContainer {
