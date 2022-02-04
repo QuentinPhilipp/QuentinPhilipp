@@ -6,14 +6,14 @@
 .projectsLayout {
     padding: 8rem 4rem 10rem 4rem;
     background-color: grey;
-    background: #171820
+    background: #050505
 }
-
-
 
 .projectsContainer {
     margin-left: auto;
     margin-right: auto;
-    width: 28rem;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 

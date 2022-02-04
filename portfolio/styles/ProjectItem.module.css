@@ -2,15 +2,8 @@
     background-color: rgb(28, 29, 38);
     display: grid;
     border-radius: .5rem;
-    position: absolute;
-}
-
-.projectWrapper {
-    width: 90%;
-    border-radius: .5rem;
-    margin: 3rem auto;
-    position: relative;
-    padding-bottom: 100%;
+    width: 30rem;
+    margin: 1.5rem;
 }
 
 .imageContainer {
