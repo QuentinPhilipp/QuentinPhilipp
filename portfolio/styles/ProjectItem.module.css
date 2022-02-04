@@ -36,6 +36,7 @@
     justify-content: flex-end;
     margin-bottom: .5rem;
     flex: 1 0 41%;
+    text-decoration: none;
 }
 
 .textContainer {
@@ -55,13 +56,12 @@
     /* padding-bottom: .5rem; */
 }
 
-
-
 .buttonViewProject {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 1em;
+    cursor: pointer; 
     margin-top: 1rem;
     font-size: 0.875rem;
     font-weight: bold;

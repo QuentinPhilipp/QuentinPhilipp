@@ -71,6 +71,15 @@
     "short_desc": {
       "type": "string",
       "maxLength": 120
+    },
+    "date": {
+      "type": "date"
+    },
+    "demo_url": {
+      "type": "string"
+    },
+    "github_url": {
+      "type": "string"
     }
   }
 }
