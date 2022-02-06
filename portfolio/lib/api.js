@@ -4,12 +4,12 @@ export function getStrapiURL(path = "") {
   }${path}`;
 }
 
-const fetchStrapi = async (path) => {
-  let apiPath = `/api/${path}&populate=%2A`;
+const fetchStrapi = async (path, query) => {
+  let apiPath = `/api/${path}${query}`;
   let requestUrl = getStrapiURL(apiPath);
+  console.log(requestUrl);
   const response = await fetch(requestUrl);
   const data = await response.json();
-  console.log(path, data);
   return data.data;
 }
 

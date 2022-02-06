@@ -2,6 +2,7 @@ import styles from '../styles/Projects.module.css';
 import ProjectItem from "./ProjectItem";
 
 const Projects = ({ projects }) => (
+    <section>
     <div className={styles.projectsLayout}>
         <h1 className={styles.projectsHeader}>Projects</h1>
         <div className={styles.projectsContainer}>
@@ -10,6 +11,7 @@ const Projects = ({ projects }) => (
             ))}
         </div>
     </div>
+    </section>
 
 )
 

@@ -1,5 +1,45 @@
 .card {
-    color: red;
-    background-color: green;
-    margin: 1rem 1.5rem;
+    color: white;
+    padding: 30px;
+    border-radius: 50px;
+    border-top-right-radius: 0px;
+    background: #3b3c4b;
+    box-shadow:  30px 30px 59px #353542,
+                 -30px -30px 59px #414354;
+    max-width: 500px;
+    float:left;  
+    flex: 1; 
+    /* clear:both; */
+}
+
+.logo {
+    flex: 0 20%; 
+}
+
+.logo span {
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+}
+
+.workWrapper {
+    margin: 5rem 5rem;
+    display: flex;
+    flex-direction: row;
+    max-width: 600px;
+}
+
+.workWrapper::after {
+    content: "";
+    display: table;
+}
+
+.workWrapper:nth-of-type(2n) .card{
+    order: 1;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 50px;
+}
+
+.workWrapper:nth-of-type(2n) .logo span{
+    border-radius: 10px 0px 0px 10px;
+    overflow: hidden;
 }

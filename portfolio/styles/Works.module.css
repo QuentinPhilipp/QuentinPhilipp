@@ -1,4 +1,16 @@
-.worksContainer {
+.worksHeader {
+    text-align: center;
+    color: rgb(237, 253, 238);
+}
+
+.worksLayout {
+    padding: 8rem 4rem 10rem 4rem;
+    background: #3b3c4b;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.worksContainer {
 }

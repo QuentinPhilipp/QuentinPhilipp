@@ -3,14 +3,17 @@ import Work from "./Work";
 
 
 const Works = ({ works }) => (
-    <div className={styles.worksContainer}>
-        {works.map((work) => (
-            // <li >
-            //     {work.attributes.title}
-            // </li>
-            <Work work={work} key={work.id}/>
-        ))}
+    <section>
+    <div className={styles.worksLayout}>
+        <h1 className={styles.worksHeader}>Experiences / Studies</h1>
+        <div className={styles.worksContainer}>
+            {works.map((work) => (
+                <Work work={work} key={work.id}/>
+            ))}
+        </div>
     </div>
+    </section>
+
 )
 
 
