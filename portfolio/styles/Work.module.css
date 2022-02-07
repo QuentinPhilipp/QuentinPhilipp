@@ -1,24 +1,34 @@
-.card {
+.detail {
     color: white;
     padding: 30px;
     border-radius: 50px;
-    border-top-right-radius: 0px;
     background: #3b3c4b;
-    box-shadow:  30px 30px 59px #353542,
-                 -30px -30px 59px #414354;
+    box-shadow:  20px 20px 43px #1f2028,
+                 -20px -20px 43px #57586e;
     max-width: 500px;
     float:left;  
     flex: 1; 
-    /* clear:both; */
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.logo {
-    flex: 0 20%; 
+.info {
+    flex: 0 30%; 
+    color: #fff;
+    margin: 0 2rem;
+    /* border-radius: 35px;
+    background: #3b3c4b;
+    box-shadow:  20px 20px 43px #1f2028,
+                -20px -20px 43px #57586e; */
 }
 
-.logo span {
-    border-radius: 0px 10px 10px 0px;
-    overflow: hidden;
+.infoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+    text-align: center;
 }
 
 .workWrapper {
@@ -33,13 +43,21 @@
     display: table;
 }
 
-.workWrapper:nth-of-type(2n) .card{
+.workWrapper:nth-of-type(2n) .detail{
     order: 1;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 50px;
 }
 
-.workWrapper:nth-of-type(2n) .logo span{
-    border-radius: 10px 0px 0px 10px;
-    overflow: hidden;
+.company {
+    font-size: 20px;
+}
+
+.dates {
+    margin: 1rem 0 2rem 0;
+}
+.title {
+    font-size: 22px;
+}
+
+.stack {
+    margin-top: auto;
 }

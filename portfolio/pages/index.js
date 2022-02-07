@@ -43,7 +43,7 @@ export async function getStaticProps() {
     // console.log(work);
 
   })
-  works = works.slice(0, 4)
+  works = works.slice(0, 3)
   return {
     props: { projects, works},
     revalidate: 30,

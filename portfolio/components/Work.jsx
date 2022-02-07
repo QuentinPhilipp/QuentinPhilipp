@@ -6,35 +6,43 @@ import Image from 'next/image';
 
 
 const Work = ({ work }) => (
-    <div className={styles.workWrapper}>
-        <div className={styles.card}>
-            <div className={styles.title}>{work.attributes.title}</div>
-            <div className={styles.company}>{work.attributes.place.data.attributes.name}</div>
-            <div className={styles.place}>
-            {work.attributes.place.data.attributes.city.data.attributes.name},  
-            ({work.attributes.place.data.attributes.city.data.attributes.countrycode})
-            </div>
-            <div className={styles.dates}>
-                <span>{work.attributes.startdate} - </span>
-                <span>{work.attributes.enddate}</span>
-            </div>
-            <div className={styles.description}>{work.attributes.content}</div>
+    <article className={styles.workWrapper}>
+        <div className={styles.detail}>
+            <h2 className={styles.title}>{work.attributes.title}</h2>
+
+            <p className={styles.description}>{work.attributes.content}</p>
             <div className={styles.stack}>
                 {work.attributes.stack.data.map((techno) => (
                         <TechNameItem techno={techno} key={techno.id}/>
                 ))}
             </div>
         </div>
-        <div className={styles.logo}>
-            <Image
-                src={getStrapiMedia(work.attributes.place.data.attributes.icon.data.attributes)}
-                width={600}
-                height={300}
-                alt={work.attributes.place.data.attributes.name}
-                objectFit="cover"
-            />
+        <div className={styles.info}>
+            <div className={styles.infoContainer}>
+                <Image
+                    src={getStrapiMedia(work.attributes.place.data.attributes.icon.data.attributes)}
+                    width={600}
+                    height={300}
+                    alt={work.attributes.place.data.attributes.name}
+                    objectFit="cover"
+                />
+                <div className={styles.company}>{work.attributes.place.data.attributes.name}</div>
+                <div className={styles.place}>
+                {work.attributes.place.data.attributes.city.data.attributes.name},  
+                ({work.attributes.place.data.attributes.city.data.attributes.countrycode})
+                </div>
+                <div className={styles.dates}>
+                    <span>{work.attributes.startdate} - </span>
+                    {work.attributes.enddate &&
+                    <span>{work.attributes.enddate}</span>
+                    }
+                    {!work.attributes.enddate &&
+                    <span>Now</span>
+                    }
+                </div>
+            </div>
         </div>
-    </div>
+    </article>
 )
 
 
