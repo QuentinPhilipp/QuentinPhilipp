@@ -4,7 +4,7 @@
 }
 
 .projectsLayout {
-    padding: 8rem 4rem 10rem 4rem;
+    padding: 4rem;
     background: #050505
 }
 
@@ -16,3 +16,9 @@
     justify-content: space-around;
 }
 
+
+@media (max-width: 768px) {
+    .projectsLayout {
+        padding: 4rem 0;
+    }
+}

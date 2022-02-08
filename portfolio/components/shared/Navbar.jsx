@@ -9,4 +9,6 @@ const Navbar = () => (
   <a href="#projects">Projects</a>
   <a href="#contact">Contact</a>
 </nav>
-);export default Navbar;
+);
+
+export default Navbar;
