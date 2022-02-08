@@ -32,9 +32,9 @@ const Work = ({ work }) => (
                 ({work.attributes.place.data.attributes.city.data.attributes.countrycode})
                 </div>
                 <div className={styles.dates}>
-                    <span>{work.attributes.startdate} - </span>
+                    <span>{work.attributes.startdate.slice(0, -3).replace("-","/")} - </span>
                     {work.attributes.enddate &&
-                    <span>{work.attributes.enddate}</span>
+                    <span>{work.attributes.enddate.slice(0, -3).replace("-","/")}</span>
                     }
                     {!work.attributes.enddate &&
                     <span>Now</span>

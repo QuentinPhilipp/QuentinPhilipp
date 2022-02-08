@@ -1,3 +1,6 @@
+@value colors: "./globals.css";
+@value dark-blue, boxShadow1, boxShadow2 from colors;
+
 .detail {
     color: white;
     padding: 30px;
@@ -5,9 +8,9 @@
     /* background: #0f1624;
     box-shadow:  20px 20px 43px #06090f,
                  -20px -20px 43px #182339; */
-    background: #e0e0e0;
-    box-shadow:  20px 20px 60px #828282,
-                -20px -20px 60px #ffffff;
+    background: dark-blue;
+    box-shadow:  20px 20px 60px boxShadow1,
+                -20px -20px 60px boxShadow2;
     max-width: 500px;
     float:left;  
     flex: 1; 
@@ -20,10 +23,6 @@
     flex: 0 30%; 
     color: #fff;
     margin: 0 2rem;
-    /* border-radius: 35px;
-    background: #3b3c4b;
-    box-shadow:  20px 20px 43px #1f2028,
-                -20px -20px 43px #57586e; */
 }
 
 .infoContainer {

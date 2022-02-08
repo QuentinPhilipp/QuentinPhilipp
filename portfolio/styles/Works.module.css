@@ -1,12 +1,15 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, connectorWidth from globals;
+
 .worksHeader {
     text-align: center;
     color: rgb(237, 253, 238);
+    margin-bottom: 3rem;
 }
 
 .worksLayout {
     padding: 8rem 0;
-    /* background: #0f1624; */
-    background: #e0e0e0;
+    background: dark-blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +35,7 @@
 }
 
 .connectorDot {
-    background-color: rgb(16, 185, 129);
+    background-color: accent;
     border-radius: 9999px;
     width: 1rem;
     height: 1rem;
@@ -49,7 +52,7 @@
 }
 
 .connectorPing {
-    background-color: rgb(16, 185, 129);
+    background-color: accent;
     border-radius: 9999px;
     animation: ping 1s cubic-bezier(0, 0, .2, 1) infinite;
     width: 1rem;
@@ -65,19 +68,19 @@
 }
 
 .firstSegment {
-    width: .25rem;
-    height: calc( 3rem + var(--connectorOffset));
+    width: connectorWidth;
+    height: calc( 3rem + connectorWidth);
     margin-top: -.5rem;
-    margin-bottom: - var(--connectorOffset);
+    margin-bottom: -connectorWidth;
 }
 .horizontalSegment {
-    width: calc( 30% + var(--connectorOffset));
-    height: .25rem;
+    width: calc( 30% + connectorWidth);
+    height: connectorWidth;
 }
 
 .secondSegment {
-    width: .25rem;
-    height: calc( 3rem + var(--connectorOffset));
+    width: connectorWidth;
+    height: calc( 3rem + connectorWidth);
 }
 
 @keyframes ping {

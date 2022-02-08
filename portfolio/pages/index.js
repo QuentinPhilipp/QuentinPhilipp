@@ -38,11 +38,11 @@ export async function getStaticProps() {
     fetchStrapi('projects?', queryProjects),
     fetchStrapi('works?', queryWorks),
   ]);
-  works.map((work) => {
-    console.log(work.attributes.place.data.attributes.icon);
-    // console.log(work);
+  // works.map((work) => {
+  //   // console.log(work.attributes.place.data.attributes.icon);
+  //   // console.log(work);
 
-  })
+  // })
   works = works.slice(0, 3)
   return {
     props: { projects, works},

@@ -32,13 +32,15 @@ const Works = ({ works }) => (
     <div className={styles.worksLayout}>
         <h1 className={styles.worksHeader}>Experiences</h1>
         <div className={styles.worksContainer}>
-            {works.map((work) => (
+            {works.slice(0, -1).map((work) => (
                 [                                
                 <Work work={work} key={work.id} />,
                 <WorkSpacer work={work} key={work.attributes.title} />
 
                 ]
             ))}
+            <Work work={works.at(-1)} key={works.at(-1).id} />,
+
         </div>
     </div>
     </section>

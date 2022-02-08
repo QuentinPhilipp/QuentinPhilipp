@@ -1,5 +1,15 @@
+@value dark-blue: #003249;
+@value middle-blue: #3a607a;
+@value light-blue: #cff6ff;
+@value accent: #e99b26;
+@value boxShadow1: #001d2a;
+@value boxShadow2: #004768;
+@value connectorWidth: 0.2rem;
+
+
 .main-container {
   padding-top: 70px;
+  scrollbar-color: yellow blue;
 }
 .entries .main-image img {
   width: 100%;
