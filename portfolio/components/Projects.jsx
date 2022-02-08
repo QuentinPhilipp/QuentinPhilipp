@@ -2,7 +2,7 @@ import styles from '../styles/Projects.module.css';
 import ProjectItem from "./ProjectItem";
 
 const Projects = ({ projects }) => (
-    <section>
+    <section id="projects">
     <div className={styles.projectsLayout}>
         <h1 className={styles.projectsHeader}>Projects</h1>
         <div className={styles.projectsContainer}>

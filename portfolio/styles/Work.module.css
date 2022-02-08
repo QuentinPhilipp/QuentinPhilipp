@@ -2,9 +2,12 @@
     color: white;
     padding: 30px;
     border-radius: 50px;
-    background: #3b3c4b;
-    box-shadow:  20px 20px 43px #1f2028,
-                 -20px -20px 43px #57586e;
+    /* background: #0f1624;
+    box-shadow:  20px 20px 43px #06090f,
+                 -20px -20px 43px #182339; */
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #828282,
+                -20px -20px 60px #ffffff;
     max-width: 500px;
     float:left;  
     flex: 1; 
@@ -32,10 +35,15 @@
 }
 
 .workWrapper {
-    margin: 5rem 5rem;
     display: flex;
     flex-direction: row;
-    max-width: 600px;
+}
+
+@media (min-width: 850px) {
+    .workWrapper {
+        margin: 0 5rem;
+        max-width: 800px;
+    }
 }
 
 .workWrapper::after {

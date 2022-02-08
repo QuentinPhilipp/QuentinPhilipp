@@ -8,7 +8,7 @@ export default function Home({ projects, works }) {
   return (
     <Layout>
       <Works works={works} />
-      {/* <Projects projects={projects}/> */}
+      <Projects projects={projects}/>
     </Layout>
 
   );
