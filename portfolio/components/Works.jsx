@@ -36,7 +36,6 @@ const Works = ({ works }) => (
                 [                                
                 <Work work={work} key={work.id} />,
                 <WorkSpacer work={work} key={work.attributes.title} />
-
                 ]
             ))}
             <Work work={works.at(-1)} key={works.at(-1).id} />,

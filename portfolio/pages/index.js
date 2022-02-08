@@ -3,14 +3,16 @@ import NextScript from 'next/document';
 import Layout from '../components/Layout';
 import Works from '../components/Works';
 import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 import fetchStrapi from '../lib/api';
 const qs = require('qs');
 
 export default function Home({ projects, works }) {
   return (
     <Layout>
-      <Works works={works} />
-      <Projects projects={projects}/>
+      {/* <Works works={works} /> */}
+      {/* <Projects projects={projects}/> */}
+      <Contact contactInfos={projects}/>
     </Layout>
   );
 }
