@@ -5,22 +5,22 @@ const WorkSpacer = ({work}) => (
     <div className={styles.workDivider}>
     {work.id % 2 == 0 &&
     [
-    <div className={`${styles.connectorDot} ${styles.right}`}>
+    <div className={`${styles.connectorDot} ${styles.right}`} key={`${work.attributes.title}_ping`}>
         <div className={styles.connectorPing}></div>
     </div>,
-    <div className={`${styles.connectorLine} ${styles.firstSegment} ${styles.right}`}></div>,
-    <div className={`${styles.connectorLine} ${styles.horizontalSegment}`}></div>,
-    <div className={`${styles.connectorLine} ${styles.secondSegment} ${styles.left}`}></div>,
+    <div className={`${styles.connectorLine} ${styles.firstSegment} ${styles.right}`} key={`${work.attributes.title}_1`}></div>,
+    <div className={`${styles.connectorLine} ${styles.horizontalSegment}`} key={`${work.attributes.title}_2`}></div>,
+    <div className={`${styles.connectorLine} ${styles.secondSegment} ${styles.left}`} key={`${work.attributes.title}_3`}></div>,
     ]
     }
     {work.id % 2 == 1 &&
     [
-        <div className={`${styles.connectorDot} ${styles.left}`}>
+        <div className={`${styles.connectorDot} ${styles.left}`} key={`${work.attributes.title}_ping`}>
             <div className={styles.connectorPing}></div>
         </div>,
-        <div className={`${styles.connectorLine} ${styles.firstSegment} ${styles.left}`}></div>,
-        <div className={`${styles.connectorLine} ${styles.horizontalSegment}`}></div>,
-        <div className={`${styles.connectorLine} ${styles.secondSegment} ${styles.right}`}></div>,
+        <div className={`${styles.connectorLine} ${styles.firstSegment} ${styles.left}`} key={`${work.attributes.title}_1`}></div>,
+        <div className={`${styles.connectorLine} ${styles.horizontalSegment}`} key={`${work.attributes.title}_2`}></div>,
+        <div className={`${styles.connectorLine} ${styles.secondSegment} ${styles.right}`} key={`${work.attributes.title}_3`}></div>,
         ]
     }
     </div>

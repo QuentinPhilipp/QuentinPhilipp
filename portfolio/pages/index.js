@@ -1,3 +1,5 @@
+import NextScript from 'next/document';
+
 import Layout from '../components/Layout';
 import Works from '../components/Works';
 import Projects from '../components/Projects';
@@ -10,7 +12,6 @@ export default function Home({ projects, works }) {
       <Works works={works} />
       <Projects projects={projects}/>
     </Layout>
-
   );
 }
 
