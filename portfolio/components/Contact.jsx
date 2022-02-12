@@ -1,9 +1,9 @@
 import styles from "../styles/Contact.module.css";
 
-const Contact = ({contactInfos}) => (
-    <section id="contact">
+const Contact = ({links}) => (
+    <section id="contact" className={styles.contactContainer}>
         <div className={styles.title}>
-            <h1>Contact</h1>
+            <h1>Contact me</h1>
         </div>
         <div className={styles.innerContactWrapper}>
             <div className={styles.infos}>

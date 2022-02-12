@@ -1,11 +1,19 @@
+@value globals: "./globals.css";
+@value dark-blue, middle-blue, accent from globals;
+
 .projectsHeader {
     text-align: center;
-    color: rgb(237, 253, 238);
+    color: dark-blue;
+    font-size:60px;
+}
+
+#highlight {
+    color: dark-blue;
 }
 
 .projectsLayout {
     padding: 4rem;
-    background: #050505
+    background: white;
 }
 
 .projectsContainer {

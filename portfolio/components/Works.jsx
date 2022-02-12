@@ -1,5 +1,6 @@
 import styles from "../styles/Works.module.css";
 import Work from "./Work";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 const WorkSpacer = ({work}) => (
     <div className={styles.workDivider}>
@@ -30,7 +31,9 @@ const WorkSpacer = ({work}) => (
 const Works = ({ works }) => (
     <section id="experiences">
     <div className={styles.worksLayout}>
-        <h1 className={styles.worksHeader}>Experiences</h1>
+        <h1 id="projectTitle" className={styles.worksHeader}>
+            <RoughNotation strokeWidth="3" color="white" type="highlight" show={true}>Experiences</RoughNotation>
+        </h1>
         <div className={styles.worksContainer}>
             {works.slice(0, -1).map((work) => (
                 [                                
