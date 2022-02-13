@@ -30,7 +30,7 @@ const ProjectItem = ({ project }) => (
                 <Link as={`/project/${project.attributes.slug}`} href="/project/[id]" target="_blank">
                     <div className={`${styles.buttonViewProject} ${styles.blue}`}>
                         View project
-                        <svg fill="white" viewBox="0 0 20 20" className={styles.buttonArrow}>
+                        <svg fill="#003249" viewBox="0 0 20 20" className={styles.buttonArrow}>
                             <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                         </svg>
                     </div>
@@ -38,7 +38,7 @@ const ProjectItem = ({ project }) => (
                 {project.attributes.demo_url &&
                 <a className={`${styles.buttonViewProject} ${styles.grey}`} href={project.attributes.demo_url} target="_blank" rel="noopener noreferrer" >
                     See the demo
-                    <svg fill="white" viewBox="0 0 20 20" className={styles.buttonArrow}>
+                    <svg fill="#003249" viewBox="0 0 20 20" className={styles.buttonArrow}>
                         <path fillRule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                     </svg>
                 </a>
