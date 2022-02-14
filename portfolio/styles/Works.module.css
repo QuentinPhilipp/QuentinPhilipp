@@ -10,18 +10,12 @@
 }
 
 .worksLayout {
-    padding: 4rem 0;
+    padding: 4rem 4rem;
     background: dark-blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-@media (min-width: 768px) {
-    .worksLayout {
-        padding: 4rem;
-    }
 }
 
 .worksContainer {
@@ -70,18 +64,18 @@
 }
 
 .firstSegment {
-    width: connectorWidth;
+    width: calc(connectorWidth);
     height: calc( 3rem + connectorWidth);
     margin-top: -.5rem;
-    margin-bottom: -connectorWidth;
+    margin-bottom: calc(-connectorWidth);
 }
 .horizontalSegment {
     width: calc( 30% + connectorWidth);
-    height: connectorWidth;
+    height: calc(connectorWidth);
 }
 
 .secondSegment {
-    width: connectorWidth;
+    width: calc(connectorWidth);
     height: calc( 3rem + connectorWidth);
 }
 
@@ -90,4 +84,25 @@
         transform: scale(2);
         opacity: 0;
     }
+}
+
+@media (max-width: 650px) {
+    .worksLayout {
+        padding: 4rem 0;
+    }
+    .horizontalSegment {
+        display: none;
+    }
+
+    .left {
+        /* Align all to .right */
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+
+    .right {
+        margin-left: 50%;
+        margin-right: 50%;
+    }
+    
 }

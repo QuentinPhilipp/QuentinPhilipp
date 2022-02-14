@@ -9,6 +9,7 @@ const Work = ({ work }) => (
     <article className={styles.workWrapper}>
         <div className={styles.detail}>
             <h2 className={styles.title}>{work.attributes.title}</h2>
+            <p className={styles.companySmall}>{work.attributes.place.data.attributes.name}</p>
 
             <p className={styles.description}>{work.attributes.content}</p>
             <div className={styles.stack}>
@@ -26,7 +27,7 @@ const Work = ({ work }) => (
                     alt={work.attributes.place.data.attributes.name}
                     objectFit="cover"
                 />
-                <div className={styles.company}>{work.attributes.place.data.attributes.name}</div>
+                <p className={styles.company}>{work.attributes.place.data.attributes.name}</p>
                 <div className={styles.place}>
                 {work.attributes.place.data.attributes.city.data.attributes.name},  
                 ({work.attributes.place.data.attributes.city.data.attributes.countrycode})
