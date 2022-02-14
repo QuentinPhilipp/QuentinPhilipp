@@ -11,7 +11,7 @@ const Hero = ({ content }) => (
             <p className={styles.details}>A french software engineer,<br></br>  passionated about software <br></br> development and embedded systems</p>
         </div>
         <div className={styles.heroImage} >
-        <HeroSVG width={500} height={500}/>
+        <HeroSVG width={600} height={600}/>
         </div>
 
     </section>
