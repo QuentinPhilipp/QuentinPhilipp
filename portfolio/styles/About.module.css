@@ -1,0 +1,60 @@
+@value globals: "./globals.css";
+@value dark-blue, middle-blue, accent, white from globals;
+
+.aboutHeader {
+    color: dark-blue;
+    margin-bottom: 1rem;
+    font-size:40px;
+}
+
+.layoutContainer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 4rem;
+}
+
+.layout {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.picture {
+    width: fit-content;
+    flex: 1 0 auto;
+}
+
+.downloadContainer {
+    display: block;
+    height: fit-content;
+    margin-top: .5rem;  
+}
+
+.aboutContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 0 1 auto;
+}
+
+.linkContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+@media (max-width: 850px) {
+    .layout {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .linkContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .layoutContainer {
+        padding: 4rem 0.75rem;
+    }
+}

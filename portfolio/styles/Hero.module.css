@@ -1,0 +1,43 @@
+@value globals: "./globals.css";
+@value dark-blue, middle-blue, accent, white from globals;
+
+.hero {
+    background-color: dark-blue;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+    min-height: 100vh;
+}
+
+.heroText {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.heroImage {
+    width: 40%;
+    display: block;
+}
+
+.nameHeader {
+    font-size: 60px;
+    font-weight: 650;
+}
+
+.details {
+    font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .heroImage {
+        display: none;
+    }
+}

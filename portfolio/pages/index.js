@@ -5,13 +5,17 @@ import Works from '../components/Works';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
 import Banner from '../components/Banner';
+import Hero from '../components/Hero';
+import About from '../components/About';
 
 import fetchStrapi from '../lib/api';
 const qs = require('qs');
 
-export default function Home({ projects, works, links }) {
+export default function Home({ projects, works, links, about, profile }) {
   return (
     <Layout>
+      <Hero content={projects}/>
+      <About content={about} links={links} profile={profile}/>
       <Works works={works} />
       {/* <Banner content="Check my projects" nextComponent={<Projects projects={projects}/>} /> */}
       <Projects projects={projects}/>
@@ -21,11 +25,6 @@ export default function Home({ projects, works, links }) {
 }
 
 export async function getStaticProps() {
-  const queryProjects = qs.stringify({
-    populate: '*'
-    }, {
-      encodeValuesOnly: true,
-  });
   const queryWorks = qs.stringify({
     populate: {
       place: {
@@ -38,22 +37,25 @@ export async function getStaticProps() {
     }, {
       encodeValuesOnly: true,
   });
-  const queryLinks = qs.stringify({
+  const queryDefault = qs.stringify({
     populate: '*'
     }, {
       encodeValuesOnly: true,
   });
 
 
-  let [projects, works, links] = await Promise.all([
-    fetchStrapi('projects?', queryProjects),
+  let [projects, works, links, about, profile] = await Promise.all([
+    fetchStrapi('projects?', queryDefault),
     fetchStrapi('works?', queryWorks),
-    fetchStrapi('links?', queryLinks),
+    fetchStrapi('links?', queryDefault),
+    fetchStrapi('about?', queryDefault),
+    fetchStrapi('profile-picture?', queryDefault),
   ]);
  
+  console.log(profile);
   works = works.slice(0, 3)
   return {
-    props: { projects, works, links},
+    props: { projects, works, links, about, profile},
     revalidate: 30,
   };
 }

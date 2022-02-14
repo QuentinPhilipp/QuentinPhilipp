@@ -24,6 +24,7 @@
     padding: 0 1rem;    
     width: 100%; 
     justify-content: space-around; 
+    margin-bottom: .5rem;
 }
 
 .buttonContainer {

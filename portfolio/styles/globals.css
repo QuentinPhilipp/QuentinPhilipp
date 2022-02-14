@@ -18,3 +18,17 @@
   width: 100%;
   display: block;
 }
+
+
+.dark {
+  color: #003249;
+}
+
+.light {
+  color: #fff;
+}
+
+.accentColor {
+  color: #e99b26;
+}
+
