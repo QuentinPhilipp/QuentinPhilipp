@@ -1,5 +1,5 @@
 @value colors: "./globals.css";
-@value dark-blue, boxShadow1, boxShadow2 from colors;
+@value dark-blue, boxShadow1, boxShadow2, accent, white from colors;
 
 .detail {
     color: white;
@@ -18,7 +18,7 @@
 
 .info {
     flex: 0 30%; 
-    color: #fff;
+    color: white;
     margin: 0 2rem;
 }
 
@@ -51,6 +51,14 @@
 .dates {
     margin: 1rem 0 2rem 0;
 }
+
+.datesSmall {
+    margin: .25rem 0 .5rem 0;
+    display: none;
+    margin-left: auto;
+    color: accent;
+}
+
 .title {
     font-size: 22px;
 }
@@ -87,6 +95,10 @@
     }
 
     .companySmall {
+        display: block;
+    }
+
+    .datesSmall {
         display: block;
     }
 }

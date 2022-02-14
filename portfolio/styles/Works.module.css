@@ -1,5 +1,5 @@
 @value globals: "./globals.css";
-@value dark-blue, accent, connectorWidth from globals;
+@value dark-blue, accent, connectorWidth, white from globals;
 
 .worksHeader {
     text-align: center;

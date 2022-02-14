@@ -10,7 +10,15 @@ const Work = ({ work }) => (
         <div className={styles.detail}>
             <h2 className={styles.title}>{work.attributes.title}</h2>
             <p className={styles.companySmall}>{work.attributes.place.data.attributes.name}</p>
-
+            <div className={styles.datesSmall}>
+                    <span>{work.attributes.startdate.slice(0, -3).replace("-","/")} - </span>
+                    {work.attributes.enddate &&
+                    <span>{work.attributes.enddate.slice(0, -3).replace("-","/")}</span>
+                    }
+                    {!work.attributes.enddate &&
+                    <span>Now</span>
+                    }
+                </div>
             <p className={styles.description}>{work.attributes.content}</p>
             <div className={styles.stack}>
                 {work.attributes.stack.data.map((techno) => (

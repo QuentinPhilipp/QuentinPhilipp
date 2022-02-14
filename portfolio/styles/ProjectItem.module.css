@@ -1,5 +1,5 @@
 @value globals: "./globals.css";
-@value dark-blue, middle-blue, light-blue, light-blue-hover, accent, accent-hover from globals;
+@value dark-blue, middle-blue, light-blue, light-blue-hover, accent, accent-hover, white from globals;
 
 .card {
     background-color: dark-blue;
