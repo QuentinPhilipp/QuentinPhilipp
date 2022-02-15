@@ -1,9 +1,15 @@
+@value globals: "./globals.css";
+@value dark-blue, middle-blue, light-blue, light-blue-hover, accent, accent-hover, white from globals;
+
+
 .navbar {
     width: 100%;
     position: fixed;
-    top:40px;
+    /* top:40px; */
     text-align:center;
     padding: 20px;
+    background: dark-blue;
+    z-index: 100;
 }
 
 .navbar a{
@@ -16,17 +22,17 @@
     letter-spacing:1px;
     position:relative;
     display:inline-block;
-    
 }
 
 /* Style the links inside the navigation bar */
 .navItem {
-    color: #fff !important;
+    color: #fff ;
     text-decoration:none;
     }
     
 .navItem:hover {
     text-decoration: none;
+    color: #fff;
     cursor: pointer;
 }
    
@@ -78,7 +84,9 @@ animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 @media screen and (max-width: 600px) {
 .navbar a:not(:first-child) {display: none;}
 .navbar a.icon {
-    float: right;
+    position: fixed;
+    right: 0;
+    top: 15px;
     display: block;
 }
 }
@@ -86,11 +94,13 @@ animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
-.navbar.responsive {position: absolute;}
+.navbar.responsive {
+    position: fixed;
+}
 .navbar.responsive a.icon {
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 0;
+    top: 15px;
 }
 .navbar.responsive a {
     float: none;

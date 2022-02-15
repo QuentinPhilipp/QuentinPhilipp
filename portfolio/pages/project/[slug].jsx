@@ -1,11 +1,11 @@
-import Layout from '../../components/Layout';
 import Image from 'next/image';
 import { getStrapiMedia } from '../../lib/media';
 import fetchStrapi from '../../lib/api';
+const qs = require('qs');
 
 const PortfolioItem = ({ portfolio }) => {
   return (
-    <Layout>
+    <div>
       <div className="row">
         <div className="portfolio-image text-center mb-4">
           <div className="col-md-12">
@@ -13,6 +13,7 @@ const PortfolioItem = ({ portfolio }) => {
               src={getStrapiMedia(portfolio.attributes.image.data[0].attributes)}
               width={1000}
               height={500}
+              alt="Project preview"
             />
           </div>
         </div>
@@ -27,12 +28,18 @@ const PortfolioItem = ({ portfolio }) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </div>
   );
 };
 
+const queryDefault = qs.stringify({
+  populate: '*'
+  }, {
+    encodeValuesOnly: true,
+});
+
 export async function getStaticProps({ params }) {
-  const portfolio = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}`);
+  const portfolio = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
   return {
       props: { portfolio: portfolio[0] },
       revalidate: 1,
@@ -40,7 +47,7 @@ export async function getStaticProps({ params }) {
   }
 
 export async function getStaticPaths() {
-  const portfolios = await fetchStrapi('projects?');
+  const portfolios = await fetchStrapi('projects?', queryDefault);
   return {
       paths: portfolios.map((portfolio) => ({
         params: {

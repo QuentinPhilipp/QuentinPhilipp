@@ -27,7 +27,7 @@ const ProjectItem = ({ project }) => (
                 </div>
             </div>
             <div className={styles.buttonContainer}>
-                <Link as={`/project/${project.attributes.slug}`} href="/project/[id]" target="_blank">
+                <Link as={`/project/${project.attributes.slug}`} href="/project/[id]" target="_blank" passHref>
                     <div className={`${styles.buttonViewProject} ${styles.blue}`}>
                         View project
                         <svg fill="#003249" viewBox="0 0 20 20" className={styles.buttonArrow}>

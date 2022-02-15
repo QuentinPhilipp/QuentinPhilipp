@@ -1,5 +1,3 @@
-import NextScript from 'next/document';
-
 import Layout from '../components/Layout';
 import Works from '../components/Works';
 import Projects from '../components/Projects';
@@ -19,7 +17,7 @@ export default function Home({ projects, works, links, about, profile }) {
       <Works works={works} />
       {/* <Banner content="Check my projects" nextComponent={<Projects projects={projects}/>} /> */}
       <Projects projects={projects}/>
-      <Contact links={links} />
+      <Contact />
     </Layout>
   );
 }
@@ -42,17 +40,23 @@ export async function getStaticProps() {
     }, {
       encodeValuesOnly: true,
   });
-
+  const querySortDate = qs.stringify({
+    sort: ['date:desc'],
+    populate: '*'
+    }, {
+      encodeValuesOnly: true,
+  });
 
   let [projects, works, links, about, profile] = await Promise.all([
-    fetchStrapi('projects?', queryDefault),
+    fetchStrapi('projects?', querySortDate),
     fetchStrapi('works?', queryWorks),
     fetchStrapi('links?', queryDefault),
     fetchStrapi('about?', queryDefault),
     fetchStrapi('profile-picture?', queryDefault),
   ]);
  
-  console.log(profile);
+  // console.log(unsortedProjects);
+
   works = works.slice(0, 3)
   return {
     props: { projects, works, links, about, profile},
