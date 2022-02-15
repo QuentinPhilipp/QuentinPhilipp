@@ -3,7 +3,7 @@ import HeroSVG from './HeroSVG';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 const Hero = ({ content }) => (
-    <section id="home" className={styles.hero}>
+    <header id="home" className={styles.hero}>
         <div className={styles.heroText}>
             <RoughNotation strokeWidth="3" color="white" type="bracket" padding="15px" brackets={["right", "left"]} show={true}>
             <h1 className={styles.nameHeader}>I'm <span className={'accentColor'}> Quentin </span> <br></br> Philipp</h1>
@@ -14,7 +14,7 @@ const Hero = ({ content }) => (
         <HeroSVG width={600} height={600}/>
         </div>
 
-    </section>
+    </header>
 )
 
 export default Hero

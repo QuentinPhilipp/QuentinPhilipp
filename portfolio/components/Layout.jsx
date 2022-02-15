@@ -2,7 +2,7 @@ import Navbar from './shared/Navbar';
 
 const Layout = ({ children }) => (
     <div>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
     </div>
   )
