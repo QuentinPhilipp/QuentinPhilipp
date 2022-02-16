@@ -18,15 +18,37 @@
 .buttonReturn {
     position: absolute;
     top: 30px;
+    left: 60px;
     padding: .75rem 2rem;
-    display: inline-block;
-    color: dark-red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    color: white;
     font-size: 1.25rem;
     transition: font-size .2s ease-in-out;
+    min-height: 60px;
+    cursor: pointer;
+}
+
+.buttonReturn span {
+    display: none;
+}
+
+.buttonReturn svg {
+    transition: transform .3s linear;
 }
 
 .buttonReturn:hover {
-    font-size: 1.3rem;
+    font-size: 1.28rem;
+}
+
+.buttonReturn:hover svg{
+    transform: rotate(135deg);
+}
+
+.buttonReturn:hover span {
+    display: block;
 }
 
 .projectDescContainer {
