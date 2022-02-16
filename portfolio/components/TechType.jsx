@@ -8,7 +8,7 @@ const TechType = ({technoCategory, name}) => {
             <div className={styles.tech}>
                 <h3 className={styles.technoCategory}>{name.toUpperCase()}</h3>
                 {technoCategory.data.map((techno) => (
-                    <p className={styles.technoName}>{techno.attributes.name}</p>
+                    <p className={styles.technoName} key={techno.id}>{techno.attributes.name}</p>
                 ))}
             </div>
         }

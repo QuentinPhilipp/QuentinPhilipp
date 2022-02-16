@@ -23,8 +23,14 @@
 }
 
 .projectDescContainer {
-    margin-top: 5rem;
+    margin: 5rem 0 3rem 0;
     display: flex;
+}
+
+.projectName {
+    font-size: 60px;
+    color: dark-blue;
+    margin-bottom: 2rem;
 }
 
 .projectInfos {
@@ -41,7 +47,7 @@
 }
 
 .previews {
-    margin: 5rem 0;
+    margin: 3rem 0;
     display: flex;
     flex-direction: column;
     gap: 3rem
@@ -55,9 +61,39 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* height: 400px; */
+    margin-top: 3rem;
 }
 
+.outsideLinks {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.outsideLink {
+    padding: 1em 3em;
+    background-color: dark-red;
+    color: white;
+    border-radius: .25rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.outsideLink:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.separatorTitle {
+    font-size: 40px;
+}
 
 @media (max-width: 768px) {
     .skillCards {
@@ -66,6 +102,14 @@
     }
 
     .projectLayout {
-        margin: 3rem .5rem;
+        padding: 3rem .5rem;
+    }
+
+    .projectDescContainer {
+        flex-direction: column-reverse;
+    }
+
+    .projectTech {
+        text-align: center;
     }
 }
