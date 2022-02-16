@@ -1,11 +1,18 @@
 @value globals: "./globals.css";
 @value dark-blue, middle-blue, accent, dark-red, white from globals;
 
-.projectLayout {
-    padding: 3rem;
-    min-height: 100vh;
-    color: white;
+.projectSection {
+    padding: 1.5rem 6rem;
+}
+
+.blueBg {
     background-color: dark-blue;
+    color: white;
+}
+
+.whiteBg {
+    background-color: white;
+    color: dark-blue;
 }
 
 .buttonReturn {
@@ -50,7 +57,8 @@
     margin: 3rem 0;
     display: flex;
     flex-direction: column;
-    gap: 3rem
+    gap: 3rem;
+    background-color: white;
 }
 
 .imageContainer {
@@ -95,14 +103,17 @@
     font-size: 40px;
 }
 
+
+@media (max-width: 1000px) {
+    .projectSection {
+        padding: 1.5rem 3rem;
+    }
+}
+
 @media (max-width: 768px) {
     .skillCards {
         flex-direction: column;
         align-items: center;
-    }
-
-    .projectLayout {
-        padding: 3rem .5rem;
     }
 
     .projectDescContainer {
@@ -112,4 +123,11 @@
     .projectTech {
         text-align: center;
     }
+
+    .projectSection {
+        padding: 1.5rem .5rem;
+    }
 }
+
+
+
