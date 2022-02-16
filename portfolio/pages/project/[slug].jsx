@@ -1,34 +1,13 @@
 import Image from 'next/image';
 import { getStrapiMedia } from '../../lib/media';
 import fetchStrapi from '../../lib/api';
+import ProjectPage from "../../components/ProjectPage";
+
 const qs = require('qs');
 
 const PortfolioItem = ({ portfolio }) => {
   return (
-    <div>
-      <div className="row">
-        <div className="portfolio-image text-center mb-4">
-          <div className="col-md-12">
-            <Image
-              src={getStrapiMedia(portfolio.attributes.image.data[0].attributes)}
-              width={1000}
-              height={500}
-              alt="Project preview"
-            />
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="portfolio-content">
-          <div className="col-md-12">
-            <div className="portfolio-headline text-center m-2">
-              <h1>{portfolio.attributes.title}</h1>
-            </div>
-            <div dangerouslySetInnerHTML={{ __html: portfolio.attributes.content}}/>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ProjectPage project={portfolio} />
   );
 };
 

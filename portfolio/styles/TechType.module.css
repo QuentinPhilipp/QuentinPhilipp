@@ -1,0 +1,13 @@
+@value globals: "./globals.css";
+@value dark-blue, dark-red, accent, dark-red, white from globals;
+
+
+.technoCategory {
+    color: dark-red;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+.technoName {
+    font-size: 16px;
+}

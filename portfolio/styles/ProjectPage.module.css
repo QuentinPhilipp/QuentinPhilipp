@@ -1,0 +1,71 @@
+@value globals: "./globals.css";
+@value dark-blue, middle-blue, accent, dark-red, white from globals;
+
+.projectLayout {
+    padding: 3rem;
+    min-height: 100vh;
+    color: white;
+    background-color: dark-blue;
+}
+
+.buttonReturn {
+    position: absolute;
+    top: 30px;
+    padding: .75rem 2rem;
+    display: inline-block;
+    color: dark-red;
+    font-size: 1.25rem;
+    transition: font-size .2s ease-in-out;
+}
+
+.buttonReturn:hover {
+    font-size: 1.3rem;
+}
+
+.projectDescContainer {
+    margin-top: 5rem;
+    display: flex;
+}
+
+.projectInfos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    flex: 60%;
+}
+
+.projectTech {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex: 40%;
+}
+
+.previews {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem
+}
+
+.imageContainer {
+    text-align: center;
+}
+
+.skillCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* height: 400px; */
+}
+
+
+@media (max-width: 768px) {
+    .skillCards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projectLayout {
+        margin: 3rem .5rem;
+    }
+}

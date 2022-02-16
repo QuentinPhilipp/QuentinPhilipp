@@ -80,6 +80,11 @@
     },
     "github_url": {
       "type": "string"
+    },
+    "project_skills": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-skill.project-skill"
     }
   }
 }
