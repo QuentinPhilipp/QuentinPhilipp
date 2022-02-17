@@ -129,6 +129,12 @@
     font-size: 40px;
 }
 
+.lightUp:hover svg{
+    /* background-color: red; */
+    fill: white;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+
 
 @media (max-width: 1000px) {
     .projectSection {
