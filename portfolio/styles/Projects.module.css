@@ -1,5 +1,5 @@
 @value globals: "./globals.css";
-@value dark-blue, middle-blue, accent, white from globals;
+@value dark-blue, accent, white from globals;
 
 .projectsHeader {
     text-align: center;

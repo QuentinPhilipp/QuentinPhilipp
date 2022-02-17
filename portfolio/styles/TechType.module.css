@@ -1,9 +1,9 @@
 @value globals: "./globals.css";
-@value dark-blue, dark-red, accent, dark-red, white from globals;
+@value dark-blue, accent, white from globals;
 
 
 .technoCategory {
-    color: dark-red;
+    color: accent;
     font-size: 16px;
     letter-spacing: 2px;
 }

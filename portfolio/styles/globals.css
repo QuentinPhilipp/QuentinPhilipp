@@ -1,11 +1,8 @@
 @value dark-blue: #003249;
-@value middle-blue: #3a607a;
-@value dark-red: #832232;
-@value light-blue: #cff6ff;
-@value light-blue-hover: #bff6ff;
 @value accent: #e99b26;
 @value accent-hover: #f9ab36;
 @value white: #f2f2f2;
+@value white-hover: #d8d8d8;
 @value boxShadow1: #001d2a;
 @value boxShadow2: #004768;
 @value connectorWidth: 0.2rem;
