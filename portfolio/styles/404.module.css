@@ -1,0 +1,36 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, white from globals;
+
+.layout {
+    display: flex;
+    padding: 5rem 0;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: white
+}
+
+
+.buttonReturn span {
+    text-decoration: underline;
+}
+
+.buttonReturn {
+    padding: .75rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    color: dark-blue;
+    font-size: 1.25rem;
+    min-height: 60px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .layout svg {
+        width: 100vw;
+    }
+}
