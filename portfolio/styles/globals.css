@@ -7,7 +7,6 @@
 @value boxShadow2: #004768;
 @value connectorWidth: 0.2rem;
 
-
 .main-container {
   padding-top: 70px;
   scrollbar-color: yellow blue;

@@ -78,7 +78,7 @@ const ProjectPage = ({ project }) => {
             </section>
 
             <section className={`${styles.projectSection} ${styles.blueBg}`}>
-                <RoughNotation strokeWidth="3" color="white" type="underline" show={true} className={styles.separatorTitle}>What I've learned:</RoughNotation>
+                <RoughNotation strokeWidth="3" color="white" type="underline" show={true} className={styles.separatorTitle}>What I&apos;ve learned:</RoughNotation>
                 <div className={styles.skillCards}>
                 {project.attributes.project_skills.data.map((skill) => (
                     <SkillCard skill={skill.attributes} key={skill.id}/>
