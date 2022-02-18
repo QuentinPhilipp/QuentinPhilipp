@@ -8,13 +8,24 @@ import styles from "../styles/ProjectItem.module.css";
 const ProjectItem = ({ project }) => (
     <article className={styles.card}>
         <div className={styles.imageContainer}>
-            <Image
-                src={getStrapiMedia(project.attributes.image.data[0].attributes)}
-                width={600}
-                height={300}
+            {project.attributes.image.data[0].attributes.formats.medium &&
+                <Image
+                src={getStrapiMedia(project.attributes.image.data[0].attributes.formats.medium)}
+                width={project.attributes.image.data[0].attributes.formats.medium.width}
+                height={project.attributes.image.data[0].attributes.formats.medium.height}
                 alt={project.attributes.title}
                 objectFit="cover"
-            />
+
+                />
+            }
+            {!project.attributes.image.data[0].attributes.formats.medium &&
+                <Image
+                src={getStrapiMedia(project.attributes.image.data[0].attributes)}
+                width={project.attributes.image.data[0].attributes.width}
+                height={project.attributes.image.data[0].attributes.height}
+                alt={project.attributes.title}
+                />
+            }
         </div>
         <div className={styles.infoContainer}>
             <div className={styles.textContainer}>
