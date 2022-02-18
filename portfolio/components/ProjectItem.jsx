@@ -15,7 +15,6 @@ const ProjectItem = ({ project }) => (
                 height={project.attributes.image.data[0].attributes.formats.medium.height}
                 alt={project.attributes.title}
                 objectFit="cover"
-
                 />
             }
             {!project.attributes.image.data[0].attributes.formats.medium &&
@@ -24,6 +23,7 @@ const ProjectItem = ({ project }) => (
                 width={project.attributes.image.data[0].attributes.width}
                 height={project.attributes.image.data[0].attributes.height}
                 alt={project.attributes.title}
+                objectFit="cover"
                 />
             }
         </div>
