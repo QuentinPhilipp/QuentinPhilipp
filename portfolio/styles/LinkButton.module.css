@@ -17,6 +17,16 @@
 }
 
 .addressDetail:hover {
-    border-color: accent;
     text-decoration: none;
+}
+
+.addressDetail:hover:after {
+    display: inline-block;
+}
+
+.addressDetail::after {
+    content: "\25C1";
+    color: accent;
+    margin-left: 1rem;
+    display: none;  
 }
