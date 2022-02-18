@@ -17,7 +17,6 @@ export default function Home({ projects, works, links, about, profile }) {
       <Works works={works} />
       {/* <Banner content="Check my projects" nextComponent={<Projects projects={projects}/>} /> */}
       <Projects projects={projects}/>
-      <Contact />
     </Layout>
   );
 }

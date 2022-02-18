@@ -100,13 +100,9 @@ const queryDefault = qs.stringify({
 
 export async function getStaticProps({ params }) {
   const projects = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
-  projects.map(function(project) {
-    console.log(project);
-})
-console.log("Get static");
   return {
       props: { project: projects[0] },
-      revalidate: 1,
+      revalidate: 30,
     };
   }
 
@@ -119,6 +115,7 @@ export async function getStaticPaths() {
         },
       })),
       fallback: false,
+      revalidate: 30,
     };
   }
 
