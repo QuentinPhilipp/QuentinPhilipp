@@ -1,11 +1,20 @@
 import styles from "../../styles/Navbar.module.css";
+import Link from 'next/link';
 
 const Navbar = () => (
 <nav className={styles.navbar} id="topnavResp">
-    <a className={styles.navItem} href="/#home">Home</a>
-    <a className={styles.navItem} href="/#about">About</a>
-    <a className={styles.navItem} href="/#experiences">Experiences</a>
-    <a className={styles.navItem} href="/#projects">Projects</a>
+    <Link as="/#home" href="/#home" passHref>
+      <span className={styles.navItem}>Home</span>
+    </Link>
+    <Link as="/#about" href="/#about" passHref>
+      <span className={styles.navItem}>About</span>
+    </Link>
+    <Link as="/#experiences" href="/#experiences" passHref>
+      <span className={styles.navItem}>Experiences</span>
+    </Link>
+    <Link as="/#projects" href="/#projects" passHref>
+      <span className={styles.navItem}>Projects</span>
+    </Link>
     <a href="javascript:void(0);" className={styles.icon} onClick={toggleResponsive}>
     <svg viewBox="0 0 100 80" width="30" height="30" fill="#fff">
       <rect width="100" height="17"></rect>

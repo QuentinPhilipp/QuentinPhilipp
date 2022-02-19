@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Custom404 = (props) => (
     <div className={styles.layout}>
-        <h1>This page doesn't exist</h1>
+        <h1>This page doesn&apos;t exist</h1>
         <Link as="/#projects" href="/#projects" passHref>
             <div className={`${styles.buttonReturn}`}>
             <span>Return somewhere safe</span>
