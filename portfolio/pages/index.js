@@ -59,6 +59,5 @@ export async function getStaticProps() {
   works = works.slice(0, 3)
   return {
     props: { projects, works, links, about, profile},
-    revalidate: 30,
   };
 }

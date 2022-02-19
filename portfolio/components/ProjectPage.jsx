@@ -102,7 +102,6 @@ export async function getStaticProps({ params }) {
   const projects = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
   return {
       props: { project: projects[0] },
-      revalidate: 30,
     };
   }
 
@@ -114,8 +113,6 @@ export async function getStaticPaths() {
           slug: project.attributes.slug,
         },
       })),
-      fallback: false,
-      revalidate: 30,
     };
   }
 
