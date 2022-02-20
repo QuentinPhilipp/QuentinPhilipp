@@ -1,5 +1,5 @@
 @value globals: "./globals.css";
-@value dark-blue, accent, white from globals;
+@value dark-blue, accent, accent-hover, white from globals;
 
 .addressDetail {
     padding: 1rem;
@@ -18,4 +18,5 @@
 .addressDetail:hover {
     text-decoration: none;
     color: dark-blue;
+    background: accent-hover;
 }
