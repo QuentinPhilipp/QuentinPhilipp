@@ -45,7 +45,7 @@ const Contact = ({}) => (
             <div className={styles.downloadButtonContainer}>
                 <a className={styles.downloadButton} href="#">
                     <svg viewBox="0 0 50 50" width="30px" height="30px" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                        <path id={styles.downloadArrow} transform="rotate(90, 25, 19.0911)" d="m23.64656,25.69309l4.72053,-4.07767l-9.12692,0l-9.1269,0l0,-2.52427l0,-2.52427l9.0222,0c4.9622,0 9.02219,-0.12794 9.02219,-0.28432c0,-0.15637 -1.97544,-1.99132 -4.38986,-4.07767l-4.38987,-3.79335l4.05758,0l4.05757,0l6.19682,5.34492l6.19682,5.34492l-6.20871,5.33469l-6.2087,5.33469l-4.27165,0l-4.27166,0l4.72055,-4.07767l0,0z" stroke="#fff" fill="#fff"/>
+                        <path id="downloadArrow" d="m23.64656,25.69309l4.72053,-4.07767l-9.12692,0l-9.1269,0l0,-2.52427l0,-2.52427l9.0222,0c4.9622,0 9.02219,-0.12794 9.02219,-0.28432c0,-0.15637 -1.97544,-1.99132 -4.38986,-4.07767l-4.38987,-3.79335l4.05758,0l4.05757,0l6.19682,5.34492l6.19682,5.34492l-6.20871,5.33469l-6.2087,5.33469l-4.27165,0l-4.27166,0l4.72055,-4.07767l0,0z" stroke="#fff" fill="#fff"/>
                         <rect rx="1" id="svg_4" height="2.589" width="43.68931" y="42" x="3.15535" stroke="#fff" fill="#fff"/>
                     </svg>      
                 <span>Download my resume</span>

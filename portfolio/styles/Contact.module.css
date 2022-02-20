@@ -160,6 +160,30 @@
     justify-content: flex-start;
 }
 
+
+/* Download animation */
+
+.downloadButton svg path {
+    transform: translateY(-10px) translateX(-5px) rotate(90deg) ;
+    transform-origin: center;
+    animation: download 2s ease-in-out infinite;
+}
+
+@keyframes download {
+    0% {
+        transform: translateY(-10px) translateX(-5px) rotate(90deg) ;
+    }
+  
+    50% {
+        transform: translateY(0px) translateX(-5px) rotate(90deg) ;
+    }
+
+    100% {
+        transform: translateY(-10px) translateX(-5px) rotate(90deg) ;
+    }
+  }
+
+
 @media (max-width: 768px) {
     .innerContactWrapper {
         display: block;
