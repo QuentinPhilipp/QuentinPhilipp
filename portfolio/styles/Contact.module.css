@@ -166,7 +166,7 @@
 .downloadButton svg path {
     transform: translateY(-10px) translateX(-5px) rotate(90deg) ;
     transform-origin: center;
-    animation: download 2s ease-in-out infinite;
+    animation: download 1.5s ease-in-out infinite;
 }
 
 @keyframes download {

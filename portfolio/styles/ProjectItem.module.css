@@ -53,10 +53,49 @@
     /* padding-bottom: .5rem; */
 }
 
+.whiteColor {
+    background-color: white;
+}
+
+.whiteColor:hover {
+    background-color: white-hover;
+}
+
+.accentColor {
+    background-color: accent;
+}
+
+.accentColor:hover {
+    background-color: accent-hover;
+}
+
+.projectShortDesc {
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    height: 6rem;
+}
+
+/* Animation arrow */
+.buttonArrowMain {
+    transition: transform 0.2s;
+    transform: translateX(-2px);
+}
+
+.buttonArrowSecondary {
+    stroke: none;
+    transition: transform 0.2s;
+}
+
+.buttonViewProject:hover svg .buttonArrowMain {
+    transform: translateX(2px);
+}
+
+.buttonViewProject:hover svg .buttonArrowSecondary {
+    stroke: currentColor;
+}
+
 .buttonViewProject {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    position: relative;
     padding: 1rem 1em;
     cursor: pointer; 
     margin-top: 1rem;
@@ -66,6 +105,11 @@
     border-radius: 0.375rem;
     color: dark-blue;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.textSVGContainer svg {
+    margin-left: 0.5rem;
 }
 
 .buttonViewProject:hover {
@@ -73,30 +117,26 @@
     text-decoration: none;
 }
 
-.blue {
-    background-color: white;
+.buttonViewProject:hover .textSVGContainer::after {
+    transform: scaleX(1);
 }
 
-.blue:hover {
-    background-color: white-hover;
+.textSVGContainer {
+    width: fit-content;
+    position: relative;
 }
 
-.grey {
-    background-color: accent;
-}
-
-.grey:hover {
-    background-color: accent-hover;
-}
-
-.buttonArrow {
-    width: 20px;
-    height: 20px;
-    margin-top: 3px;
-}
-
-.projectShortDesc {
-    padding-right: 1rem;
-    font-size: 0.875rem;
-    height: 6rem;
+.textSVGContainer::after {
+    position: absolute;
+    /* position: relative; */
+    width: calc(100% - 2em);
+    height: 2px;
+    top: 25px;
+    left: 0px;
+    pointer-events: none;
+    content: "";
+    background-color: dark-blue;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+    transition: all 0.4s ease;
 }
