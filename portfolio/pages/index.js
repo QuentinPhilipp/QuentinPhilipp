@@ -8,9 +8,9 @@ import fetchStrapi from '../lib/api';
 
 const qs = require('qs');
 
-export default function Home({ projects, works, links, about, profile }) {
+export default function Home({ projects, works, links, about, profile, contactDetails }) {
   return (
-    <Layout>
+    <Layout contactDetails={contactDetails}>
       <Hero content={projects}/>
       <About content={about} links={links} profile={profile}/>
       <Works works={works} defaultCount={3}/>
@@ -33,11 +33,7 @@ export async function getStaticProps() {
     }, {
       encodeValuesOnly: true,
   });
-  const queryDefault = qs.stringify({
-    populate: '*'
-    }, {
-      encodeValuesOnly: true,
-  });
+  
   const querySortDate = qs.stringify({
     sort: ['date:desc'],
     populate: '*'
@@ -45,18 +41,26 @@ export async function getStaticProps() {
       encodeValuesOnly: true,
   });
 
-  let [projects, works, links, about, profile] = await Promise.all([
-    fetchStrapi('projects?', querySortDate),
-    fetchStrapi('works?', queryWorks),
-    fetchStrapi('links?', queryDefault),
-    fetchStrapi('about?', queryDefault),
-    fetchStrapi('profile-picture?', queryDefault),
-  ]);
- 
-  // console.log(unsortedProjects);
 
-  works = works.slice(0, 5)
-  return {
-    props: { projects, works, links, about, profile},
-  };
+const projects = await fetchStrapi('projects?', querySortDate)
+const works = await fetchStrapi('works?', queryWorks)
+const links = await fetchStrapi('links?')
+const about = await fetchStrapi('about?')
+const profile = await fetchStrapi('profile-picture?')
+const email = await fetchStrapi('email?')
+const contactText = await fetchStrapi('contact-text?')
+const phone = await fetchStrapi('phone-number?')
+const address = await fetchStrapi('address?')
+
+const contactDetails = {
+  text: contactText.attributes.content,
+  email: email.attributes.content,
+  phone: phone.attributes.content,
+  address: address.attributes.content
+}
+
+console.log(contactDetails);
+return {
+  props: { projects, works, links, about, profile, contactDetails},
+};
 }

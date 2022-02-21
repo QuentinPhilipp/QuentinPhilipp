@@ -29,7 +29,6 @@ const WorkSpacer = ({work, len}) => (
 )
 
 function WorkContainer ({ works }) {
-    console.log(works);
     return (
         <div className={styles.worksContainer}>
         {works.map((work) => (

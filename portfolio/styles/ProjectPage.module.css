@@ -59,7 +59,7 @@
 .projectName {
     font-size: 60px;
     color: dark-blue;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .projectInfos {
@@ -135,6 +135,13 @@
     filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
 }
 
+.projectType {
+    color: accent;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    margin-top: .5rem;
+}
 
 @media (max-width: 1000px) {
     .projectSection {

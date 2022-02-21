@@ -29,6 +29,7 @@ const ProjectPage = ({ project }) => {
                     </div>
                     <div className={styles.projectInfos}>
                         <RoughNotation strokeWidth="3" color="white" type="highlight" show={true} className={styles.projectName}>{project.attributes.title}</RoughNotation>
+                        <p className={styles.projectType}>{project.attributes.project_type.data.attributes.type}</p>
                         <p>{project.attributes.short_desc}</p>
                         <div className={styles.outsideLinks}>
                             {project.attributes.demo_url &&
@@ -99,11 +100,11 @@ const queryDefault = qs.stringify({
 });
 
 export async function getStaticProps({ params }) {
-  const projects = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
-  return {
-      props: { project: projects[0] },
+    const projects = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
+    return {
+        props: { project: projects[0] },
     };
-  }
+}
 
 export async function getStaticPaths() {
   const projects = await fetchStrapi('projects?', queryDefault);

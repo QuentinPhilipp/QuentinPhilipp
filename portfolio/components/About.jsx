@@ -31,7 +31,7 @@ const About = ({ content, links, profile }) => (
                     </div>
                 </div>
                 <div className={styles.downloadContainer}>
-                <CTAButton url={"#"} text="Download my CV" />
+                <CTAButton url={"QuentinPhilippResume.pdf"} text={"Download my CV"} download={"QuentinPhilipp CV"}/>
                 </div>
             </div>
 

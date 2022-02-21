@@ -1,10 +1,10 @@
 import Navbar from './shared/Navbar';
 import Contact from './Contact';
-const Layout = ({ children }) => (
+const Layout = ({ children, contactDetails }) => (
     <div>
         <Navbar />
         {children}
-        <Contact />
+        <Contact contactDetails={contactDetails}/>
     </div>
   )
   export default Layout; 
