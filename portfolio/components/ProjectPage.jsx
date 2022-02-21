@@ -87,8 +87,6 @@ const ProjectPage = ({ project }) => {
                 </div>
             </section>
 
-            <Contact />
-
         </div>
   );
 };

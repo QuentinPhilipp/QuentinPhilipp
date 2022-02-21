@@ -59,7 +59,6 @@ const contactDetails = {
   address: address.attributes.content
 }
 
-console.log(contactDetails);
 return {
   props: { projects, works, links, about, profile, contactDetails},
 };
