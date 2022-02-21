@@ -19,17 +19,6 @@
     text-decoration: none;
 }
 
-.addressDetail:hover:after {
-    display: inline-block;
-}
-
-.addressDetail::after {
-    content: "\25C1";
-    color: dark-blue;
-    margin-left: 1rem;
-    display: none;  
-}
-
 .iconContainer {
     border-radius: 9999px;
     padding: 0.3rem;
