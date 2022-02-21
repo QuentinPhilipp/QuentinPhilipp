@@ -1,6 +1,10 @@
 @value globals: "./globals.css";
 @value dark-blue, accent, white from globals;
 
+.projectSection {
+    position: relative;
+}
+
 .projectsHeader {
     text-align: center;
     color: dark-blue;

@@ -5,7 +5,6 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 
 import fetchStrapi from '../lib/api';
-import {remark} from 'remark';
 
 const qs = require('qs');
 
