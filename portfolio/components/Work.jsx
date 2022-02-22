@@ -1,14 +1,15 @@
 import styles from "../styles/Work.module.css";
 import { getStrapiMedia } from '../lib/media';
 import TechNameItem from './TechNameItem';
-import Link from 'next/link';
 import Image from 'next/image';
 
 
 const Work = ({ work }) => (
     <article className={styles.workWrapper}>
         <div className={styles.detail}>
-            <h2 className={styles.title}>{work.attributes.title}</h2>
+            <h2 className={styles.title}>{work.attributes.title}<span>{work.attributes.contexts.data.map((context, index) =>(
+                <p key={index} className={styles.workContext}>{context.attributes.context}</p>
+            ))}</span></h2>
             <p className={styles.companySmall}>{work.attributes.place.data.attributes.name}</p>
             <div className={styles.datesSmall}>
                     <span>{work.attributes.startdate.slice(0, -3).replace("-","/")} - </span>

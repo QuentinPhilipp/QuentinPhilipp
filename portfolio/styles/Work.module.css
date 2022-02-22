@@ -16,6 +16,10 @@
     align-items: flex-start;
 }
 
+.detail div ul {
+    margin-top: 0px;
+}
+
 .info {
     flex: 0 30%; 
     color: white;
@@ -72,6 +76,16 @@
     margin-bottom: .5rem;
     margin-top: .25rem;
     display: none;
+}
+
+.workContext {
+    font-size: 16px;
+    color: accent;
+    margin-bottom: 0;
+}
+
+.workContext:first-child {
+    margin-top: .5rem;
 }
 
 @media (min-width: 850px) {
