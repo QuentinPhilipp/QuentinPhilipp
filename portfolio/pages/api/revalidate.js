@@ -5,7 +5,11 @@ export default async function handler(req, res) {
     if (req.query.secret !== process.env.REVALIDATE_TOKEN) {
       return res.status(401).json({ message: 'Invalid token' })
     }
-  
+    console.log(req.query.path);
+    let query = "/"
+    if (req.query.path) {
+      query = req.query.path;;
+    } 
     try {
       await res.unstable_revalidate('/')
       return res.json({ revalidated: true })
