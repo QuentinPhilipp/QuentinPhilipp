@@ -4,6 +4,7 @@ import Projects from '../components/Projects';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Head from 'next/head';
+import MetaTags from '../components/MetaTag';
 
 import fetchStrapi from '../lib/api';
 
@@ -14,7 +15,7 @@ export default function Home({ projects, works, links, about, profile, contactDe
     <Layout contactDetails={contactDetails}>
       <Head>
         <title>Quentin Philipp | Portfolio</title>
-        <link rel="icon" href="/favicon.ico" />
+        <MetaTags title={"Quentin Philipp | Portfolio"}/>
       </Head>
       <Hero content={projects}/>
       <About content={about} links={links} profile={profile}/>

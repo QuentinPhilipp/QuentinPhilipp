@@ -7,6 +7,7 @@ import SkillCard from './SkillCard';
 import TechType from './TechType';
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 import Head from 'next/head';
+import MetaTags from './MetaTag';
 
 const qs = require('qs');
 
@@ -15,7 +16,7 @@ const ProjectPage = ({ project }) => {
         <div className={styles.projectLayout}>
             <Head>
                 <title>Quentin Philipp | {project.attributes.title}</title>
-                <link rel="icon" href="/favicon.ico" />
+                <MetaTags title={`Quentin Philipp | ${project.attributes.title}`}/>
             </Head>
             <Link as="/#projects" href="/#projects" passHref>
                     <div className={`${styles.buttonReturn}`}>
