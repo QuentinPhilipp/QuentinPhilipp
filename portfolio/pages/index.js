@@ -3,6 +3,7 @@ import Works from '../components/Works';
 import Projects from '../components/Projects';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Head from 'next/head';
 
 import fetchStrapi from '../lib/api';
 
@@ -11,6 +12,10 @@ const qs = require('qs');
 export default function Home({ projects, works, links, about, profile, contactDetails }) {
   return (
     <Layout contactDetails={contactDetails}>
+      <Head>
+        <title>Quentin Philipp | Portfolio</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Hero content={projects}/>
       <About content={about} links={links} profile={profile}/>
       <Works works={works} defaultCount={3}/>
