@@ -29,7 +29,7 @@ const ProjectItem = ({ project }) => (
         </div>
         <div className={styles.infoContainer}>
             <div className={styles.textContainer}>
-                <h3>{project.attributes.title}</h3>
+                <h2>{project.attributes.title}</h2>
                 <p className={styles.projectShortDesc}>{project.attributes.short_desc}</p>
                 <div className={styles.techContainer}>
                     {project.attributes.project_highlight_techno.data.map((techno) => (
