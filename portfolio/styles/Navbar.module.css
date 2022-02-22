@@ -83,9 +83,9 @@ animation:in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
 .navbar span:not(:first-child) {display: none;}
-.navbar a.icon {
+.navbar p.icon {
     position: fixed;
-    right: 0;
+    right: 15px;
     top: 15px;
     display: block;
 }
@@ -97,9 +97,9 @@ This class makes the topnav look good on small screens (display the links vertic
 .navbar.responsive {
     position: fixed;
 }
-.navbar.responsive a.icon {
+.navbar.responsive p.icon {
     position: fixed;
-    right: 0;
+    right: 15px;
     top: 15px;
 }
 .navbar.responsive span {
