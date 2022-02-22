@@ -27,14 +27,6 @@ export default function Home({ projects, works, links, about, profile, contactDe
   );
 }
 
-
-async function processWorkMarkdown(works) {
-  works.forEach(async function(work) {
-    work.attributes.content = await markdownToHtml(work.attributes.content);
-  });
-}
-
-
 export async function getStaticProps() {
   const queryWorks = qs.stringify({
     sort: ['startdate:desc'],
@@ -76,9 +68,13 @@ const contactDetails = {
   address: address.attributes.content
 }
 
-console.log(works)
+works.forEach(async function(work) {
+  work.attributes.content = await markdownToHtml(work.attributes.content);
+});
 
-processWorkMarkdown(works)
+projects.forEach(async function(project) {
+  project.attributes.description = await markdownToHtml(project.attributes.description);
+});
 
 return {
   props: { projects, works, links, about, profile, contactDetails},
