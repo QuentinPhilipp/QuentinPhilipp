@@ -3,7 +3,7 @@ const MetaTags = ({title}) => (
         <meta name="title" content="Quentin Philipp | Portfolio website" />
         <meta name="description" content="Portfolio website to show my projects and previous experiences. " />
         <meta name="author" content="Quentin Philipp" />
-        <meta name="keywords" content="Portfolio, Projects, Developer" />
+        <meta name="keywords" content="Portfolio, Projects, Developer, Quentin Philipp, Software" />
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
 
