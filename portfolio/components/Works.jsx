@@ -3,9 +3,9 @@ import {useState} from 'react';
 import Work from "./Work";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
-const WorkSpacer = ({work, len}) => (
+const WorkSpacer = ({work, len, position}) => (
     <div className={styles.workDivider}>
-    {work.id % 2 == 0 && work.id < len &&
+    {position % 2 == 0 && position < len &&
     [
     <div className={`${styles.connectorDot} ${styles.right}`} key={`${work.attributes.title}_ping`}>
         <div className={styles.connectorPing}></div>
@@ -15,7 +15,7 @@ const WorkSpacer = ({work, len}) => (
     <div className={`${styles.connectorLine} ${styles.secondSegment} ${styles.left}`} key={`${work.attributes.title}_3`}></div>,
     ]
     }
-    {work.id % 2 == 1 && work.id < len &&
+    {position % 2 == 1 && position < len &&
     [
         <div className={`${styles.connectorDot} ${styles.left}`} key={`${work.attributes.title}_ping`}>
             <div className={styles.connectorPing}></div>
@@ -31,10 +31,10 @@ const WorkSpacer = ({work, len}) => (
 function WorkContainer ({ works }) {
     return (
         <div className={styles.worksContainer}>
-        {works.map((work) => (
+        {works.map((work, index) => (
             [                                
             <Work work={work} key={work.attributes.title} />,
-            <WorkSpacer work={work} key={work.id} len={works.length} />
+            <WorkSpacer work={work} key={work.id} len={works.length} position={index+1} />
             ]
         ))}
         </div>

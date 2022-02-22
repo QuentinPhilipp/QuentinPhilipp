@@ -7,6 +7,7 @@ import Head from 'next/head';
 import MetaTags from '../components/MetaTag';
 
 import fetchStrapi from '../lib/api';
+import markdownToHtml from '../lib/processMarkdown';
 
 const qs = require('qs');
 
@@ -26,8 +27,17 @@ export default function Home({ projects, works, links, about, profile, contactDe
   );
 }
 
+
+async function processWorkMarkdown(works) {
+  works.forEach(async function(work) {
+    work.attributes.content = await markdownToHtml(work.attributes.content);
+  });
+}
+
+
 export async function getStaticProps() {
   const queryWorks = qs.stringify({
+    sort: ['startdate:desc'],
     populate: {
       place: {
         populate: '*',
@@ -58,12 +68,17 @@ const contactText = await fetchStrapi('contact-text?')
 const phone = await fetchStrapi('phone-number?')
 const address = await fetchStrapi('address?')
 
+
 const contactDetails = {
   text: contactText.attributes.content,
   email: email.attributes.content,
   phone: phone.attributes.content,
   address: address.attributes.content
 }
+
+console.log(works)
+
+processWorkMarkdown(works)
 
 return {
   props: { projects, works, links, about, profile, contactDetails},
