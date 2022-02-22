@@ -5,7 +5,7 @@ const MetaTags = ({title}) => (
         <meta name="author" content="Quentin Philipp" />
         <meta name="keywords" content="Portfolio, Projects, Developer" />
         <link rel="icon" href="/favicon.ico" />
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
 
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://quentinp.me/" />

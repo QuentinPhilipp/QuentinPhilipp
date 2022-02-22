@@ -9,7 +9,7 @@ const Contact = ({ contactDetails }) => (
         <div className={styles.innerContactWrapper}>
             <div className={styles.infos}>
                 <div className={styles.infosContainer}>
-                    <h3>Get in touch</h3>
+                    <p className={styles.getInTouch}>Get in touch</p>
                     <p>{contactDetails.text}</p>
                     <div className={styles.linkContainer}>
                         <a href="https://github.com/QuentinPhilipp" className={styles.github} aria-label="Github" target="_blank" rel="noopener noreferrer">
