@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://quentinp.me
+
+# Sitemaps
+Sitemap: https://quentinp.me/sitemap.xml

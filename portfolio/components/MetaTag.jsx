@@ -11,13 +11,15 @@ const MetaTags = ({title}) => (
         <meta property="og:url" content="https://quentinp.me/" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content="Portfolio website to show my projects and previous experiences. " />
-        <meta property="og:image" content="https://metatags.io/header.png" />
+        <meta property="og:image" content="https://quentinp.me/header.png" />
         
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://quentinp.me/" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content="Portfolio website to show my projects and previous experiences. " />
         <meta property="twitter:image" content="https://metatags.io/header.png" />
+        <link rel="apple-touch-icon" href="https://quentinp.me/favicon.ico" />
+
     </>
 );
 
