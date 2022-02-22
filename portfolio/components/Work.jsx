@@ -19,7 +19,7 @@ const Work = ({ work }) => (
                     <span>Now</span>
                     }
                 </div>
-            <p className={styles.description} dangerouslySetInnerHTML={{ __html: work.attributes.content }}></p>
+            <div className={styles.description} dangerouslySetInnerHTML={{ __html: work.attributes.content }} />
             <div className={styles.stack}>
                 {work.attributes.stack.data.map((techno) => (
                         <TechNameItem techno={techno} key={techno.id}/>

@@ -68,15 +68,22 @@ const contactDetails = {
   address: address.attributes.content
 }
 
-works.forEach(async function(work) {
-  work.attributes.content = await markdownToHtml(work.attributes.content);
-});
+  await parseWorks(works);
+  await parseProjects(projects);
 
-projects.forEach(async function(project) {
-  project.attributes.description = await markdownToHtml(project.attributes.description);
-});
+  return {
+    props: { projects, works, links, about, profile, contactDetails},
+  };
+}
 
-return {
-  props: { projects, works, links, about, profile, contactDetails},
-};
+async function parseWorks(works) {
+  works.forEach(async function(work) {
+    work.attributes.content = await markdownToHtml(work.attributes.content);
+  });
+}
+
+async function parseProjects(projects) {
+  projects.forEach(async function(project) {
+    project.attributes.description = await markdownToHtml(project.attributes.description);
+  });
 }
