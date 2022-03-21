@@ -1,0 +1,59 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, connectorWidth, white from globals;
+
+.switchCheckbox[type=checkbox]{
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+.switchLabel {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 70px;
+	height: 40px;
+	background: grey;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+}
+
+.switchLabel:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+.switchCheckbox:checked + .switchLabel {
+	background: #bada55;
+}
+
+.switchCheckbox:checked + .switchLabel:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+.switchLabel:active:after {
+	width: 50px;
+}
+
+.buttonContainer {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.detailText {
+    margin-top: 1rem;
+    padding-left: 1rem;
+    color: white;
+    font-size: 1.3rem;
+}

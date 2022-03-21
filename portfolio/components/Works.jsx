@@ -1,6 +1,7 @@
 import styles from "../styles/Works.module.css";
 import {useState} from 'react';
 import Work from "./Work";
+import ToggleSwitch from "./ToggleSwitch";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 const WorkSpacer = ({work, len, position}) => (
@@ -44,12 +45,33 @@ function WorkContainer ({ works }) {
 
 const ReadMore = ({ works }) => {
     const [isReadMore, setIsReadMore] = useState(true);
+    const [isJobOnly, setIsJobOnly] = useState(true);
     const toggleReadMore = () => {
         setIsReadMore(!isReadMore);
     };
+    const toggleJobOnly = () => {
+        setIsJobOnly(!isJobOnly);
+    };
+
+    function getWorksFromToggle() {
+        if (isJobOnly) {
+            return works.filter(item => item.attributes.contexts.data[0].attributes.context != "Studies");
+        }
+        else {
+            return works;
+        }
+    }
+
     return (
         <div className={styles.worksContainer}>
-        {isReadMore ? <WorkContainer works={works.slice(0, 3)}/> : <WorkContainer works={works}/>}
+        <ToggleSwitch 
+            isOn={isJobOnly}
+            handleToggle={() => toggleJobOnly()}
+            checkedText="Professional experiences only"
+            uncheckedText="Professional and school experience"
+        />
+
+        {isReadMore ? <WorkContainer works={getWorksFromToggle().slice(0, 3)}/> : <WorkContainer works={getWorksFromToggle()}/>}
         <span onClick={toggleReadMore} className={styles.moreOrHide}>
           {isReadMore ? "Read more" : "Show less"}
         </span>
