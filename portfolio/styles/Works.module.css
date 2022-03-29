@@ -144,6 +144,10 @@
         display: none;
     }
 
+    .animationBikeContainer {
+        display: none;
+    }
+
     .left {
         /* Align all to .right */
         margin-left: 50%;
