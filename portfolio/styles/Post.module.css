@@ -1,0 +1,101 @@
+
+.postTitle {
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1.25;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.backToHome {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+}
+
+.backToHome a {
+    color: black;
+}
+
+.backToHome a:visited {
+    color: black;
+}
+
+.hoverUnderline {
+    text-decoration: none;
+}
+
+.hoverUnderline:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.articleContainer {
+    margin-bottom: 8rem;
+    padding: 0 0.5rem;
+}
+
+.postCoverContainer {
+    margin-bottom: 2rem;
+}
+
+.postDate {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.postAuthor {
+    font-size:1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+/* lg */
+@media (min-width:1024px) {
+    .postTitle {
+        font-size: 6rem;
+        line-height: 1;
+    }
+}
+
+/* md */
+@media (min-width: 768px) {
+    .postCoverContainer {
+        margin-bottom: 4rem;
+    }
+
+    .container {
+        max-width: 768px;
+    }
+
+    .postTitle {
+        font-size: 4.5rem; 
+        line-height: 1;
+        text-align: left;
+    }
+
+    .backToHome {
+        font-size: 2.25rem;
+        line-height: 2.5rem; 
+        letter-spacing: -0.05em;
+    }
+}
+
+/* sm */
+@media (min-width: 640px) {
+    .postCoverContainer {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
