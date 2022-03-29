@@ -1,6 +1,7 @@
 import Layout from '../components/Layout';
 import Works from '../components/Works';
 import Projects from '../components/Projects';
+import Articles from '../components/Articles';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Head from 'next/head';
@@ -11,7 +12,7 @@ import markdownToHtml from '../lib/processMarkdown';
 
 const qs = require('qs');
 
-export default function Home({ projects, works, links, about, profile, contactDetails }) {
+export default function Home({ projects, works, links, about, profile, contactDetails, articles }) {
   return (
     <Layout contactDetails={contactDetails}>
       <Head>
@@ -23,6 +24,7 @@ export default function Home({ projects, works, links, about, profile, contactDe
       <Works works={works} defaultCount={3}/>
       {/* <Banner content="Check my projects" nextComponent={<Projects projects={projects}/>} /> */}
       <Projects projects={projects}/>
+      <Articles articles={articles}/>
     </Layout>
   );
 }
@@ -59,6 +61,7 @@ const email = await fetchStrapi('email?')
 const contactText = await fetchStrapi('contact-text?')
 const phone = await fetchStrapi('phone-number?')
 const address = await fetchStrapi('address?')
+const articles = await fetchStrapi('posts?')
 
 
 const contactDetails = {
@@ -70,15 +73,22 @@ const contactDetails = {
 
   await parseWorks(works);
   await parseProjects(projects);
+  await parseArticles(articles);
 
   return {
-    props: { projects, works, links, about, profile, contactDetails},
+    props: { projects, works, links, about, profile, contactDetails, articles},
   };
 }
 
 async function parseWorks(works) {
   works.forEach(async function(work) {
     work.attributes.content = await markdownToHtml(work.attributes.content);
+  });
+}
+
+async function parseArticles(articles) {
+  articles.forEach(async function(article) {
+    article.attributes.content = await markdownToHtml(article.attributes.content);
   });
 }
 

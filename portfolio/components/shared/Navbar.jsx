@@ -35,6 +35,9 @@ function Navbar() {
       <Link as="/#projects" href="/#projects" passHref>
         <span className={styles.navItem} onClick={turnOffResponsive}>Projects</span>
       </Link>
+      <Link as="/#articles" href="/#articles" passHref>
+        <span className={styles.navItem} onClick={turnOffResponsive}>Articles</span>
+      </Link>
       <p className={styles.icon} onClick={toggleResponsive}>
       <svg viewBox="0 0 100 80" width="30" height="30" fill="#fff">
         <rect width="100" height="17"></rect>

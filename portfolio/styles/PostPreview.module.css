@@ -1,0 +1,43 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, white from globals;
+
+.postContainer {
+    width:30rem;
+    margin: 1.5rem;
+}
+
+.coverContainer {
+    margin-bottom: 1.25rem;
+}
+
+.titleContainer {
+    margin-bottom: 0.75rem;
+    font-size: 1.875rem;
+    line-height: 1.375;
+
+}
+
+.dateContainer {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.content {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    line-height: 1.625;
+}
+
+.hoverUnderline {
+    text-decoration: none;
+    color: dark-blue;
+}
+
+.hoverUnderline:hover {
+    text-decoration: underline;
+}
+
+.hoverUnderline:visited {
+    color: dark-blue;
+}

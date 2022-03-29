@@ -1,0 +1,38 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, white from globals;
+
+.articlesSection {
+    position: relative;
+}
+
+.articlesHeader {
+    text-align: center;
+    color: dark-blue;
+    font-size:60px;
+}
+
+#highlight {
+    color: dark-blue;
+}
+
+.articlesLayout {
+    padding: 4rem;
+    background: white;
+}
+
+.articlesContainer {
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+
+
+@media (max-width: 768px) {
+    .articlesLayout {
+        padding: 4rem 0;
+    }
+}
