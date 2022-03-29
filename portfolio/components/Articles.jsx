@@ -13,7 +13,7 @@ function Articles({ articles, title="Articles" }) {
         </div>
         <div className={styles.articlesLayout}>
             <h1 id="articleTitle" className={styles.articlesHeader}>
-                <RoughNotation strokeWidth="3" color="#003249" type="circle" show={true} >{title}</RoughNotation>
+                <RoughNotation strokeWidth="3" color="#003249" type="bracket" padding="15px" brackets={["right", "left"]} show={true} >{title}</RoughNotation>
             </h1>
             <div className={styles.articlesContainer}>
             {articles.map((article) => (
