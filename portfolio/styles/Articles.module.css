@@ -34,6 +34,25 @@
     background-color: white;
 }
 
+/* Size of the svg : 1331.8626708984375 */
+.dividerAnimate {
+    margin-top: -2rem;
+    margin-left: 0;
+    stroke-dasharray: 50 1331.8626708984375;
+    stroke-dashoffset: 0;
+    animation: draw 5s linear forwards infinite;
+    z-index: 1000;
+}
+
+@keyframes draw {
+0% {
+    stroke-dashoffset: 0;
+}
+100% {
+    stroke-dashoffset: 1331.8626708984375;
+}
+}
+
 @media (max-width: 768px) {
     .articlesLayout {
         padding: 4rem 0;
