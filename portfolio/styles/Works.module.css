@@ -98,6 +98,44 @@
     text-align: center;
 }
 
+.animationBike {
+    stroke-dasharray: 400;
+    stroke-dashoffset: 500;
+    animation: draw 5s linear forwards infinite;
+    /* position: absolute; */
+  }
+
+.animationBikeContainer {
+    position: absolute;
+    animation: moveBike 5s linear reverse infinite;
+}
+
+.rightBike{
+    transform: scaleX(-1);
+    animation: moveBike 5s linear forwards infinite;
+}
+  
+@keyframes draw {
+0% {
+    stroke-dashoffset: 450;
+}
+50% {
+    stroke-dashoffset: 0;
+}
+100% {
+    stroke-dashoffset: 450;
+}
+}
+
+ @keyframes moveBike {
+0% {
+    margin-left: 7rem;
+}
+100% {
+    margin-left: -7rem;
+}
+} 
+
 @media (max-width: 650px) {
     .worksLayout {
         padding: 4rem 0;
