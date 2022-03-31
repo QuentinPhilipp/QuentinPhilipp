@@ -34,7 +34,7 @@ const Work = ({ work }) => (
                     width={600}
                     height={300}
                     alt={work.attributes.place.data.attributes.name}
-                    objectFit="cover"
+                    objectFit="contain"
                 />
                 <p className={styles.company}>{work.attributes.place.data.attributes.name}</p>
                 <div className={styles.place}>

@@ -1,0 +1,30 @@
+@value globals: "./globals.css";
+@value dark-blue, accent, white from globals;
+
+
+.credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: dark-blue;
+}
+
+.copy {
+    padding-bottom: 2rem;
+}
+
+.love {
+    text-decoration: none;
+    position: relative;
+}
+
+.love::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: calc( 50% - 1px );
+    border-bottom: 3px solid dark-blue;
+}
