@@ -8,7 +8,7 @@ const Hero = ({ content }) => (
             <RoughNotation strokeWidth="3" color="white" type="bracket" padding="15px" brackets={["right", "left"]} show={true}>
             <h1 className={styles.nameHeader}>I&apos;m <span className={"accentColor"}> Quentin </span> <br></br> Philipp</h1>
             </RoughNotation>
-            <p className={styles.details}>A french software engineer,<br></br>  passionated about software <br></br> development and embedded systems</p>
+            <p className={styles.details}>A french software engineer,<br></br>  passionated about software <br></br> development and sports.</p>
         </div>
         <div className={styles.heroImage} >
         <HeroSVG width={600} height={600}/>
