@@ -164,3 +164,104 @@
      }
    }
   
+   
+@media (max-width: 768px) {
+  .skill {
+    padding: 0.25rem .5rem;
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+  }
+
+  .skillContainer {
+    height: 400px;
+    width: 285px;
+  }
+
+  .skillContainer:nth-child(1) {
+    height: 450px;
+  }
+
+  .skill p {
+    margin: 0;
+  }
+
+  .skill svg {
+    margin: 0;
+  }
+
+  /* Positions */  
+  .skill:nth-child(2).frontend {
+    top: 180px;
+    left: 115px;
+    z-index: 3;
+  }
+  .skill:nth-child(3).frontend {
+    top: 88px;
+    left: 40px;
+    z-index: 2;
+  }
+  .skill:nth-child(4).frontend {
+    top: 280px;
+    left: 155px;
+    z-index: 2;
+  }
+  .skill:nth-child(5).frontend {
+    top: 280px;
+    left: 30px;
+    z-index: 3;
+  }
+  .skill:nth-child(6).frontend {
+    top: 80px;
+    left: 170px;
+    z-index: 3;
+  }
+  .skill:nth-child(7).frontend {
+    top: 190px;
+    left: 0px;
+    z-index: 1;
+  }
+  
+  .skill:nth-child(2).backend {
+    top: 80px;
+    left: 50px;
+  }
+  .skill:nth-child(3).backend {
+    top: 120px;
+    left: 150px;
+  }
+  .skill:nth-child(4).backend {
+    top: 220px;
+    left: 125px;
+  }
+  .skill:nth-child(5).backend {
+    top: 180px;
+    left: 25px;
+  }
+  
+  .skill:nth-child(2).other {
+    top: 80px;
+    left: 125px;
+    z-index:3;
+  }
+  .skill:nth-child(5).other {
+    top: 150px;
+    left: 30px;
+    z-index: 1;
+  }
+  .skill:nth-child(4).other {
+    top: 180px;
+    left: 145px;
+    z-index: 2;
+  }
+  .skill:nth-child(3).other {
+    top: 270px;
+    left: 60px;
+    z-index:1;
+  }
+}
