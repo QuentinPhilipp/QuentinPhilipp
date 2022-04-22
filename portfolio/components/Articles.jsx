@@ -5,7 +5,7 @@ import PostPreview from "./PostPreview";
 function Articles({ articles, title="Articles" }) {
     return (
         <section id="articles" className={styles.articlesSection}>
-        <hr class={styles.divider}/>
+        <hr className={styles.divider}/>
         <div className={styles.articlesLayout}>
             <h1 id="articleTitle" className={styles.articlesHeader}>
                 <RoughNotation strokeWidth="3" color="#003249" type="bracket" padding="15px" brackets={["right", "left"]} show={true} >{title}</RoughNotation>
