@@ -3,6 +3,7 @@
 
 .articlesSection {
     position: relative;
+    background-color: white;
 }
 
 .articlesHeader {
@@ -29,28 +30,30 @@
     margin-top: 3rem;
 }
 
-.divider { 
-    margin-top: -2rem;
-    background-color: white;
+.divider {  
+    border: 0;
+    height: 2px;
+    width: 15%;
+    position: relative;
+    margin: 0px auto;
+    background: dark-blue;
+    overflow: visible;
 }
 
-/* Size of the svg : 1331.8626708984375 */
-.dividerAnimate {
-    margin-top: -2rem;
-    margin-left: 0;
-    stroke-dasharray: 50 1331.8626708984375;
-    stroke-dashoffset: 0;
-    animation: draw 5s linear forwards infinite;
-    z-index: 1000;
-}
-
-@keyframes draw {
-0% {
-    stroke-dashoffset: 0;
-}
-100% {
-    stroke-dashoffset: 1331.8626708984375;
-}
+.divider:before {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: dark-blue;
+      display: inline-block;
+      border: 2px solid dark-blue;
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin: 0 0 0 -3px;
+      transform:rotate(45deg);
+      -ms-transform:rotate(45deg);
+      -webkit-transform:rotate(45deg);
 }
 
 @media (max-width: 768px) {
