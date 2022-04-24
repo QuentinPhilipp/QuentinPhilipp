@@ -44,6 +44,7 @@
     font-size: 18px;
     -webkit-box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.48);
     box-shadow: 5px 5px 15px 3px rgba(0,0,0,0.48);
+    transition: 0.2s ease all;
   }
   
   .skill svg {
@@ -127,7 +128,14 @@
   /* Animations */
   
   .skill:hover {
-    transform: translateY(-15px);
+    /* transform: translateY(-15px); */
+    /* transform: rotateX(15deg) rotateY(15deg) rotateZ(15deg); */
+    transform:
+    perspective(800px)
+    rotateY(-15deg)
+    translateY(-15px)
+    rotateX(10deg);
+    opacity: 1;
   }
   
   .skill:hover svg  {

@@ -22,7 +22,6 @@ export async function getStaticProps({ params }) {
   const portfolio = await fetchStrapi(`projects?filters[slug][$eq]=${params.slug}&`, queryDefault);
 
   portfolio[0].attributes.description = await markdownToHtml(portfolio[0].attributes.description);
-  console.log(portfolio);
 
   return {
       props: { portfolio: portfolio[0] },
