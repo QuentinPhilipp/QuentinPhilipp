@@ -61,7 +61,7 @@ const ProjectPage = ({ project }) => {
                 <div className={styles.previews}>
                 {project.attributes.image.data.map((image) => (
                     <div className={styles.imageContainer} key={image.id}>
-                        {image.attributes.formats.medium &&
+                        {image.attributes.formats?.medium &&
                             <Image
                             src={getStrapiMedia(image.attributes.formats.medium)}
                             width={image.attributes.formats.medium.width}
@@ -69,7 +69,7 @@ const ProjectPage = ({ project }) => {
                             alt={image.attributes.alternativeText}
                             />
                         }
-                        {!image.attributes.formats.medium &&
+                        {!image.attributes.formats?.medium &&
                             <Image
                             src={getStrapiMedia(image.attributes)}
                             width={image.attributes.width}
