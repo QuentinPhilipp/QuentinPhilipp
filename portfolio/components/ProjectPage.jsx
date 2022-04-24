@@ -54,7 +54,7 @@ const ProjectPage = ({ project }) => {
                         </div>
                     </div>             
                 </div>
-                <div dangerouslySetInnerHTML={{ __html: project.attributes.description }} />
+                <div className={styles.description} dangerouslySetInnerHTML={{ __html: project.attributes.description }} />
             </section>
             <section className={`${styles.projectSection} ${styles.whiteBg}`}>
                 <RoughNotation strokeWidth="3" color="#003249" type="underline" show={true} className={styles.separatorTitle}>Preview:</RoughNotation>

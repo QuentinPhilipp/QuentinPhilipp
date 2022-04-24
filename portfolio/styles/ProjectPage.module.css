@@ -56,6 +56,10 @@
     display: flex;
 }
 
+.description a {
+    color: #fff;
+}
+
 .projectName {
     font-size: 60px;
     color: dark-blue;
