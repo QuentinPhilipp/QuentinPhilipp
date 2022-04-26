@@ -91,6 +91,10 @@
     text-align: center;
 }
 
+.imageContainer span img {
+    max-width: 750px !important;
+}
+
 .skillCards {
     display: flex;
     flex-direction: row;
