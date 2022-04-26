@@ -61,15 +61,15 @@ const ProjectPage = ({ project }) => {
                 <div className={styles.previews}>
                 {project.attributes.image.data.map((image) => (
                     <div className={styles.imageContainer} key={image.id}>
-                        {image.attributes.formats?.medium &&
+                        {image.attributes.formats?.large &&
                             <Image
-                            src={getStrapiMedia(image.attributes.formats.medium)}
-                            width={image.attributes.formats.medium.width}
-                            height={image.attributes.formats.medium.height}
+                            src={getStrapiMedia(image.attributes.formats.large)}
+                            width={image.attributes.formats.large.width}
+                            height={image.attributes.formats.large.height}
                             alt={image.attributes.alternativeText}
                             />
                         }
-                        {!image.attributes.formats?.medium &&
+                        {!image.attributes.formats?.large &&
                             <Image
                             src={getStrapiMedia(image.attributes)}
                             width={image.attributes.width}
