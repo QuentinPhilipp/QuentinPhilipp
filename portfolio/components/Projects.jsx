@@ -2,7 +2,8 @@ import styles from '../styles/Projects.module.css';
 import ProjectItem from "./ProjectItem";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
-const Projects = ({ projects, title="Projects" }) => (
+const Projects = ({ projects, title="Projects" }) => 
+(
     <section id="projects" className={styles.projectSection}>
     <div className={styles.projectsLayout}>
         <h1 id="projectTitle" className={styles.projectsHeader}>
