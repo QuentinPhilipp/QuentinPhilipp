@@ -3,10 +3,30 @@ import Link from 'next/link';
 import TechNameItem from './TechNameItem';
 import { getStrapiMedia } from '../lib/media';
 import styles from "../styles/ProjectItem.module.css";
+import { useRef, useEffect } from "react";
 
 
-const ProjectItem = ({ project }) => (
-    <article className={styles.card}>
+const ProjectItem = ({ project }) => {
+    const projectRef = useRef(null);
+
+    useEffect(() => {
+        async function animate() {
+          if (projectRef.current) {
+            const sr = (await import("scrollreveal")).default
+            sr().reveal(projectRef.current, {
+                reset: true,
+                delay: 50,
+                easing: "ease-in-out",
+                distance: '60px',
+                interval: 50
+            })
+          }
+        }
+        animate()
+      }, [])
+
+    return (
+    <article className={styles.card} ref={projectRef}>
         <div className={styles.imageContainer}>
             {project.attributes.image.data[0].attributes.formats.medium &&
                 <Image
@@ -65,7 +85,8 @@ const ProjectItem = ({ project }) => (
         </div>
     </article>
 
-)
+); 
+};
 
 {/* <Link as={`/project/${project.attributes.slug}`} href="/project/[id]"> */}
 
