@@ -9,8 +9,8 @@
 
 <h3> 🌐 Check my personal website to see my resume and my projects</h3>
 <p>
-<a href="https://www.quentinp.me/" target="_blank"><img alt="Website" src="https://img.shields.io/badge/My portfolio-quentinp.me-blue?style=for-the-badge&logo=google-chrome&logoColor=white"></a>
-<a href="https://strava-stats.quentinp.me" target="_blank"><img alt="Website" src="https://img.shields.io/badge/My latest project-Strava 3D Stats-blue?style=for-the-badge&logo=githubsponsors"></a>
+<a href="https://www.quentinphilipp.fr/" target="_blank"><img alt="Website" src="https://img.shields.io/badge/My portfolio-quentinphilipp.fr-blue?style=for-the-badge&logo=google-chrome&logoColor=white"></a>
+<a href="https://strava-stats.quentinphilipp.fr" target="_blank"><img alt="Website" src="https://img.shields.io/badge/My latest project-Strava 3D Stats-blue?style=for-the-badge&logo=githubsponsors"></a>
 </p>
 
 <h3>🛠 Tech Stack</h3>
