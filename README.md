@@ -3,7 +3,7 @@
 
 <h3> 👨‍💻 About Me </h3>
 
-- 👨‍💻 &nbsp; I'm a French software engineer, working currently for Siemens Digital Industries Software.
+- 👨‍💻 &nbsp; I'm a French software engineer, working currently for Alcméon.
 - 🎓 &nbsp; I studied computer science and embedded systems at the Ecole Nationale d'Ingénieur de Brest (ENIB), France.
 - 😁 &nbsp; Enjoys discovering new technologies and new ways to make useful softwares.
 
